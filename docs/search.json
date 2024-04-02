@@ -10,16 +10,6 @@
     ]
   },
   {
-    "objectID": "Standard_uitvoer/intro.html",
-    "href": "Standard_uitvoer/intro.html",
-    "title": "Standard Uitvoer",
-    "section": "",
-    "text": "Matrix Compress - csv",
-    "crumbs": [
-      "Standard Uitvoer"
-    ]
-  },
-  {
     "objectID": "Standard_uitvoer/01_MatrixBewerkingen/intro.html",
     "href": "Standard_uitvoer/01_MatrixBewerkingen/intro.html",
     "title": "1  Matrix Bewerkingen",
@@ -149,6 +139,16 @@
     "crumbs": [
       "Standard Uitvoer",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Milieu(Goudappel)</span>"
+    ]
+  },
+  {
+    "objectID": "Routines/intro.html",
+    "href": "Routines/intro.html",
+    "title": "Routines",
+    "section": "",
+    "text": "This folder contains the crypted files.",
+    "crumbs": [
+      "Routines"
     ]
   }
 ]
