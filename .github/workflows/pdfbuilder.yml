@@ -59,7 +59,7 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
         with:
-          name: user_pdf
+          name: vmrdh-jobs_usercreated_pdf
           path: ./_output/MRDH-Models.pdf
       - name: Generate release tag
         id: generate_release_tag
