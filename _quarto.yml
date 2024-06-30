@@ -3,7 +3,7 @@ project:
   output-dir: _output
 
 book:
-  title: "MRDH-Models"
+  title: "VMRDH-Jobs"
   author: 
     name: Srirama Bhamidipati
   date: last-modified
