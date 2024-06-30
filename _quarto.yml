@@ -7,7 +7,7 @@ book:
   author: 
     name: Srirama Bhamidipati
   date: last-modified
-  date-format: long
+  date-format: YYYY-MM-DDTHH:mm:ss
   navbar:
     background: primary
     search: true
