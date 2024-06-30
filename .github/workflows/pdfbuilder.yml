@@ -48,7 +48,7 @@ jobs:
   
 
       # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
-      - name: Publish to GitHub Pages (and render) 
+      - name: Publish to GitHub Pages Pdf (and render) 
         uses: quarto-dev/quarto-actions/render@v2
         with:
          to: pdf
