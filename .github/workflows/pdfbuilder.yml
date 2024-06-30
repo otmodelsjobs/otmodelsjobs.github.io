@@ -55,7 +55,7 @@ jobs:
          to: pdf
       - name: main
         run: |
-          cd /home/runner/work/docs/
+          cd /home/runner/work/
           tree
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
