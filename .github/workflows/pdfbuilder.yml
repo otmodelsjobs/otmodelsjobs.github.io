@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-artifact@v4.3.3
         with:
           name: vmrdh-jobs_usercreated_pdf
-          path: ./_output/MRDH-Models.pdf
+          path: ./_output/VMRDH-Jobs.pdf
       - name: Generate release tag
         id: generate_release_tag
         uses: amitsingh-007/next-release-tag@v5.0.0
@@ -75,7 +75,7 @@ jobs:
           tag: ${{ steps.generate_release_tag.outputs.next_release_tag }}
           generateReleaseNotes: true
           makeLatest: true
-          artifacts: "./_output/MRDH-Models.pdf"
+          artifacts: "./_output/VMRDH-Jobs.pdf"
           token: ${{ secrets.GITHUB_TOKEN }}
            
         env:
