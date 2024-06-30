@@ -6,7 +6,7 @@ book:
   title: "VMRDH-Jobs"
   author: 
     name: Srirama Bhamidipati
-  date: now
+  date: "`r format(Sys.time(), '%d %B, %Y')`"
   #date-format: YYYY-MM-DDTHH:mm:ssZ
   navbar:
     background: primary
