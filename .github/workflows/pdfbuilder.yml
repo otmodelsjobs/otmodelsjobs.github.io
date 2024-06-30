@@ -51,7 +51,6 @@ jobs:
       - name: Publish to GitHub Pages (and render) 
         uses: quarto-dev/quarto-actions/render@v2
         with:
-         path: docs
          to: pdf
       - name: main
         run: |
