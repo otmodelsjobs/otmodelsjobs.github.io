@@ -54,8 +54,8 @@ jobs:
          to: pdf
       - name: main
         run: |
-          cd /home/runner/work/
-          tree
+          find . -name MRDH-Models.pdf
+          
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
         with:
