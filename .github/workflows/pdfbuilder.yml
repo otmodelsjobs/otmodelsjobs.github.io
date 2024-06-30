@@ -3,7 +3,7 @@ on:
     branches:
       - user
 
-name: Render and Publish
+name: User Render and Publish
 
 # you need these permissions to publish to GitHub pages
 permissions: 
@@ -18,7 +18,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         
-      - name: Set up Quarto
+      - name: Set up Renderer
         uses: quarto-dev/quarto-actions/setup@v2
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +33,7 @@ jobs:
    
 
       # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
-      - name: Setup R
+      - name: Setup Framework
         uses: r-lib/actions/setup-r@v2
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
@@ -54,19 +54,19 @@ jobs:
          to: pdf
       - name: main
         run: |
-          find . -name MRDH-Models.pdf
+          pwd
           
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
         with:
-          name: my_pdf
-          path: /home/runner/work/delete/delete/test/docs/test.pdf
+          name: user_pdf
+          path: ./_output/MRDH-Models.pdf
       - name: Generate release tag
         id: generate_release_tag
         uses: amitsingh-007/next-release-tag@v5.0.0
         with:
            github_token: ${{ secrets.GITHUB_TOKEN }}
-           tag_prefix: 'OTjobs_guide-v'
+           tag_prefix: 'OTJobs_UserCreated_guide-v'
            tag_template: 'yyyy.mm.dd.i'
 
       - name: Create Release
@@ -75,7 +75,7 @@ jobs:
           tag: ${{ steps.generate_release_tag.outputs.next_release_tag }}
           generateReleaseNotes: true
           makeLatest: true
-          artifacts: "/home/runner/work/delete/delete/test/docs/test.pdf"
+          artifacts: "./_output/MRDH-Models.pdf"
           token: ${{ secrets.GITHUB_TOKEN }}
            
         env:
