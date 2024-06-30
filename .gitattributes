@@ -1,4 +1,6 @@
 .github export-ignore
 .gitattributes export-ignore
 mrdhmodels.Rproj export-ignore
-* export-ignore
+index.html git-ignore
+README.md	git-ignore
+docs/ git-ignore
