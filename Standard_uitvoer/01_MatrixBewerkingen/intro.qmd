@@ -1,6 +1,6 @@
 # Matrix Bewerkingen
 
-This group of jobs deal with various matrix handling techniques. 
+This group of jobs deal with various matrix handling techniques. By Miranca
 
 ## Fratar Methode 
 
