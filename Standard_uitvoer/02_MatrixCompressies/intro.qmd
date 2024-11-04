@@ -8,7 +8,11 @@
 
 ## Purpose
 
-Some text explaining what the code does.
+There are 4 types of matrix compression jobs. Each job has a different spatial aggregation level. The five aggregation levels are :
+- Stedelijkheid
+- gemeenten
+- MRDH groot / MRDH groot etm
+- MRDH Studiegebied 
 
 
 
@@ -18,7 +22,7 @@ Following are the inputs to this job.
 
 ## Outputs
 
-Following are the outputs to this job.
+You also have to control the output format. The output can be in two formats: excel or openoffice. If you are working on the servers, you must open/ uncomment the `Naar Open Office` and the the two lines below it. If you want to get an excel format output, you would comment the `Naar Open Office` and the the two lines below it and uncomment `Naar Excel` and the two lines below it. 
 
 
 
