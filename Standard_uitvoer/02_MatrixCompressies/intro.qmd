@@ -9,16 +9,35 @@
 ## Purpose
 
 There are 4 types of matrix compression jobs. Each job has a different spatial aggregation level. The five aggregation levels are :
-- Stedelijkheid
-- gemeenten
-- MRDH groot / MRDH groot etm
-- MRDH Studiegebied 
+* Stedelijkheid
+* Gemeenten
+* MRDH groot / MRDH groot etm
+* MRDH Studiegebied 
 
-
+```{mermaid}
+flowchart LR
+A[Matrices] --> B{Spatial Level}
+B --> C[Stedelijkheid]
+B --> D[Gemeenten]
+B --> E[MRDH 65x65]
+B --> F[MRDH Studiegebied]
+C --> G[Output]
+D --> G[Output]
+E --> G[Output]
+F --> G[Output]
+G --> H[excel]
+G --> I[open office]
+```
 
 ## Inputs
 
-Following are the inputs to this job.
+The inputs for the jobs are matrices listed under `$matrices`. The different jobs handle the level of aggregation for you, so you do not have to change anything else (see outputs if you want to change output formats). The input `$matrices`takes a list, each item in the list takes the form `["Output_Sheet_name", [P,M,T,U]],`. 
+
+
+
+:::{.callout-important}
+Each spatial level is already defined in the job. If you have not edited this part of the job, you can use it without caution. But if you have changed the ` # definieer Gebieden ` part of the code, you have to be careful that each _Centroid Number_ is exclusively in only one _gebied*_. If not, you will get an error. 
+:::
 
 ## Outputs
 
