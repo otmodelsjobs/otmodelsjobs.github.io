@@ -1,57 +1,61 @@
 # Matrix Compressies
 
-
-
-
-::: {.nav-pills}
-::: {.panel-tabset}
-
+:::::: nav-pills
+::::: panel-tabset
 ## Purpose
 
-There are 4 types of matrix compression jobs. Each job has a different spatial aggregation level. The five aggregation levels are :
-* Stedelijkheid
-* Gemeenten
-* MRDH groot / MRDH groot etm
-* MRDH Studiegebied 
+There are 4 types of matrix compression jobs. Each job has a different spatial aggregation level. The four aggregation levels are :
+
+-   Stedelijkheid
+-   Gemeenten
+-   MRDH groot / MRDH groot etm
+-   MRDH Studiegebied
 
 ```{mermaid}
+
+
 flowchart LR
-A[Matrices] --> B{Spatial Level}
-B --> C[Stedelijkheid]
-B --> D[Gemeenten]
-B --> E[MRDH 65x65]
+
+%% colors %%
+classDef green fill:#16b552,stroke:#16b552,color:#fff
+
+
+
+A[(Matrices)]:::green --> B[Spatial Level]
+B -->  C[Stedelijkheid] 
+B --> D[Gemeenten] 
+B:::green --> E[MRDH 65x65]:::green
 B --> F[MRDH Studiegebied]
 C --> G[Output]
 D --> G[Output]
 E --> G[Output]
 F --> G[Output]
 G --> H[excel]
-G --> I[open office]
+G:::green --> I[open office]:::green
+
+linkStyle 0 stroke:green,stroke-width:2px
+
+
 ```
 
 ## Inputs
 
-The inputs for the jobs are matrices listed under `$matrices`. The different jobs handle the level of aggregation for you, so you do not have to change anything else (see outputs if you want to change output formats). The input `$matrices`takes a list, each item in the list takes the form `["Output_Sheet_name", [P,M,T,U]],`. 
+The inputs for the job are matrices listed under `$matrices`. Different jobs handle the different level of aggregation for you, so you do not have to change anything else in the job (see outputs if you want to change output formats). The input `$matrices`takes a list, each item in the list takes the form `["Output_Sheet_name", [P,M,T,U]],`.
 
-
-
-:::{.callout-important}
-Each spatial level is already defined in the job. If you have not edited this part of the job, you can use it without caution. But if you have changed the ` # definieer Gebieden ` part of the code, you have to be careful that each _Centroid Number_ is exclusively in only one _gebied*_. If not, you will get an error. 
+::: callout-important
+Each spatial level is a different job. If you have changed only the list of matrices in  the job, you can use it without caution. But if you have changed the `# definieer Gebieden` part of the code, that is, if you have changed the definition of each gebied, you have to be careful that each *Centroid Number* is exclusively in ONLY ONE _gebied_. If not, you will get an error.
 :::
 
 ## Outputs
 
-You also have to control the output format. The output can be in two formats: excel or openoffice. If you are working on the servers, you must open/ uncomment the `Naar Open Office` and the the two lines below it. If you want to get an excel format output, you would comment the `Naar Open Office` and the the two lines below it and uncomment `Naar Excel` and the two lines below it. 
-
-
+You also have to control the output format. The output can be in two formats: excel or openoffice. If you are working on the MRDH servers, you must open/ uncomment the `Naar Open Office` and the the two lines below it. If you want to get an excel format output, you would comment the `Naar Open Office` and the the two lines below it and uncomment `Naar Excel` and the two lines below it.
 
 ## Code
 
 Download the code.[matrixcompress.rb](../first.rb)
 
 ::: {.content-hidden when-format="pdf"}
-
-```ruby
+``` ruby
 # Variabelen: 
 #====================================================================================================================
 # definieer matrices [naam,[pmtu]]
@@ -103,7 +107,7 @@ Download the code.[matrixcompress.rb](../first.rb)
        
   # definieer Gebieden (Maximaal 256!)
   #Deelgebieden Rotterdam (14)
-  gebied1=[[5297, 5298, 5299, 5300, 5301, 5302, 5303, 5304, 5305, 5306, 5307, 5308, 5309, 5310, 5311, 5312, 5313, 5314, 5315, 5316, 5317, 5318, 5319, 5320, 5321, 5322, 5323, 5324, 5325, 5326, 5327, 5328, 5329, 5330, 5331, 5332, 5333, 5334, 5335, 5336, 5337, 5338, 5339, 5340, 5341, 5342, 5343, 5344, 5345, 5346, 5347, 5348, 5349, 5350, 5351, 5352, 5353, 5354, 5355, 6565, 6570, 6672, 6673, 6674, 6675, 6676, 6677, 6678, 6680, 6681, 6682, 6683, 6684, 6685, 6690, 6692, 6697, 6699, 6700,	6571, 6572, 6573, 6574, 6575, 6576, 6577, 6578, 6579, 6580, 6581, 6582],"Centrum"]
+  gebied1=[[5297, 5298, 5299, 5300, 5301, 5302, 5303, 5304, 5305, 5306, 5307, 5308, 5309, 5310, 5311, 5312, 5313, 5314, 5315, 5316, 5317, 5318, 5319, 5320, 5321, 5322, 5323, 5324, 5325, 5326, 5327, 5328, 5329, 5330, 5331, 5332, 5333, 5334, 5335, 5336, 5337, 5338, 5339, 5340, 5341, 5342, 5343, 5344, 5345, 5346, 5347, 5348, 5349, 5350, 5351, 5352, 5353, 5354, 5355, 6565, 6570, 6672, 6673, 6674, 6675, 6676, 6677, 6678, 6680, 6681, 6682, 6683, 6684, 6685, 6690, 6692, 6697, 6699, 6700,   6571, 6572, 6573, 6574, 6575, 6576, 6577, 6578, 6579, 6580, 6581, 6582],"Centrum"]
   gebied2=[[5420, 5421, 5422, 5423, 5424, 5425, 5426, 5427, 5428, 5429, 5430, 5431, 5432, 5433, 5434, 5435, 5436, 5437, 5438, 5439, 5440, 5441, 5442, 5443, 5444, 5445, 5446, 5447, 5448, 5449, 5450, 5451, 5452, 5453, 5454, 5455, 5456, 5457, 5458, 5459, 5460, 5461, 5462, 5463, 5464, 5465, 5466, 5467, 5468, 5469, 5470, 5471, 5472, 5473, 5474, 5475, 5476, 5477, 5478, 5479, 5480, 5481, 5482, 5483, 5484, 5485, 5486, 5487, 5488, 5489, 5490, 5491, 5492, 5493, 5494, 6569, 6695],"Delfshaven"]
   gebied3=[[5360, 5361, 5362, 5363, 5364, 5365, 5366, 5367, 5368, 5369, 5370, 5371, 5372, 5373, 5374, 5375, 5376, 5377, 5378, 5379, 5380, 5381, 5382, 5383, 5384, 5385, 5386, 5387, 5388, 5389, 5390, 5391, 5392, 5393, 5394, 5395, 5396, 5397, 5398, 5399, 5400, 5401, 5402, 5403, 5404, 5405, 5406, 5407, 5408, 5409, 5410, 5411, 5412, 5413, 5414, 5415, 5416, 5417, 5418, 5419],"Noord"]
   gebied4=[[5726, 5727, 5728, 5729, 5730, 5731, 5732, 5733, 5734, 5735, 5736, 5737, 5738, 5739, 5740, 5741, 5742, 5743, 5744, 5745, 5746, 5747, 5748, 5749, 5750, 5751, 5752, 5753, 5754, 5755, 5756, 5757, 5758, 5759, 5760, 5761, 5762, 5763, 5764, 5765, 5766, 5767, 5768, 5769, 5770, 5771, 5772, 5773, 5774, 5775, 5776, 5777, 5778, 5779, 5780, 5781, 5782, 5783, 5784, 5785, 5786, 5787, 5788, 5789, 5790, 5791, 5792, 5793, 5794, 5795, 5796, 5797, 5798, 5799, 5800, 5801, 5802, 5803, 5804, 5805, 5806, 5807, 5808, 5809, 5810, 5811, 5812, 5813, 5814, 5815, 5816, 5817, 6659],"Kralingen"]  
@@ -195,11 +199,7 @@ WriteMatrixToExcel(gecomprimeerdeMatrices, $matrices, $naam)
 #~ WriteMatrixToCalc(gecomprimeerdeMatrices, $matrices, $naam)
 
 writeln "Gereed!"
-
 ```
 :::
-
-:::
-
-
-:::
+:::::
+::::::
