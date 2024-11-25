@@ -1,0 +1,131 @@
+# Matrix Bewerkingen
+
+This group of jobs deal with various matrix handling techniques. By Miranca and srirama
+
+## Fratar Methode 
+
+
+
+::: {.nav-pills}
+::: {.panel-tabset}
+
+### Purpose
+
+Look inside each tab to understand what you will get from this job.
+
+
+
+### Inputs
+
+Following are the inputs to this job.
+
+
+```ruby
+fratarTest.source_cube = '2020_KAL' # Geef MatrixCube op (hier: 2016_SMC)        
+fratarTest.matrix = [1,2,1,103]     # Geef Matrix (1 PER AANROEP!) (Hier Auto OS)
+```
+
+
+
+### Outputs
+
+Following are the outputs to this job.
+
+
+
+```ruby
+fratarTest.destination_cube = 'FratarDemo' # Resultaatcube 
+```
+
+
+### Code
+
+Download the code.[matrixcompress.rb](../../first.rb)
+
+::: {.content-hidden when-format="pdf"}
+```ruby
+# voorbeeldscript Matrixbewerkingen - DonorZone
+# Version 1.0 17-10-2022
+requireCrypted $Ot.dirJob+'Standaard uitvoer\Routines\Matrixbewerkingen\UseFratarDistribution.rc' # Geef het pad op naar de UseDonorDistribution.rc (oplevering is gepland in \Routines\Matrixbewerkingen)
+
+# Hier bepalen we per zone de nieuwe doelwaarden voor rijen en kolommen. 
+# Dit mag worden opgegeven per zone, per rij of kolom
+rowTargets = {1 => 5000, 25 => 200} # Producties opgeven per zone (hier krijgt zone 1 5000 ritten en zone 25 200 ritten)
+colTargets = {25 => 100}            # Attracties opgeven per zone (hier krijgt zone 25 100 aankomsten)  
+zoneData = {:rows => rowTargets, :cols => colTargets}
+
+
+# Vul hieronder de juiste source_cube en destination_cube in!
+
+fratarTest = UseFratarDistribution.new     # Doe een aanroep naar de FratarModule
+fratarTest.help                            # Laat de Hulp file zien (optioneel)
+fratarTest.source_cube = '2020_KAL' #'2040_StedRef_REM_SMC'        # Geef een MatrixCube op (hier: 2016_SMC)        
+fratarTest.matrix = [1,2,1,103]            # Geef een Matrix op (ENKELE MATRIX PER AANROEP!) (Hier Auto OS)
+fratarTest.targetZoneData = zoneData       # targetZoneData naar de bovengenoemde zonetotalen
+fratarTest.destination_cube = 'FratarDemo' # Resultaatcube waar het resultaat van de bewerking wordt weggeschreven
+fratarTest.execute
+```
+:::
+
+:::
+:::
+## Matrixritten op basis van voorbeeldzone
+
+
+
+::: {.nav-pills}
+::: {.panel-tabset}
+
+### Purpose
+
+Some text explaining what the code does.
+
+
+
+### Inputs
+
+Following are the inputs to this job.
+
+### Outputs
+
+Following are the outputs to this job.
+
+### Code
+
+Download the code.[matrixcompress.rb](../first.rb)
+
+
+
+:::
+
+:::
+## Percentage groei ten opzichte van voorbeeldzone
+
+
+
+
+::: {.nav-pills}
+::: {.panel-tabset}
+
+### Purpose
+
+Some text explaining what the code does.
+
+
+
+### Inputs
+
+Following are the inputs to this job.
+
+### Outputs
+
+Following are the outputs to this job.
+
+### Code
+
+Download the code.[matrixcompress.rb](../first.rb)
+
+
+
+:::
+:::
