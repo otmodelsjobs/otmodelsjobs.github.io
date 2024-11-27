@@ -4,7 +4,7 @@
 ::: panel-tabset
 ## Purpose
 
-Some text explaining what the code does.
+The voertuigprestaties ( or vehicle-km, vehicle-hours) is a performance indicator for the whole network (or select network). This indicator shows how many km were travelled by all the vehicles in the network or how many hours were spent by all the vehicles in the network. More time spent by vehicles in the network could indicate congestion. Similarly more vehicle-km driven by vehicles indicate higher pollution levels for example. 
 
 ## Inputs
 

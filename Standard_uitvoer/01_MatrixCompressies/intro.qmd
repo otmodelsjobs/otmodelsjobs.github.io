@@ -1,7 +1,7 @@
 # Matrix Compressies
 
-::::::: nav-pills
-::: panel-tabset
+:::::: nav-pills
+::::: panel-tabset
 ## Purpose
 
 The VMRDH model has approximately 8000 zones which results in a 8000x8000 matrix. This is difficult to interpret or compare. For easy interpretation, the zones are aggregated into larger spatial levels. There are four aggregation levels:
@@ -13,33 +13,7 @@ The VMRDH model has approximately 8000 zones which results in a 8000x8000 matrix
 
 There are 4 spatial levels in the job library and each level has its own matrix compression job. The most frequently used spatial-aggregation is the 65 zones matrix.
 
-```{mermaid}
-
-
-flowchart LR
-
-%% colors %%
-classDef green fill:#16b552,stroke:#16b552,color:#fff
-
-
-
-A[(Matrices)]:::green --> B[Spatial Level]
-B -->  C[Stedelijkheid] 
-B --> D[Gemeenten] 
-B:::green --> E["MRDH 65x65 #9829;"]:::green
-B --> F[MRDH Studiegebied]
-C --> G[Output]
-D --> G[Output]
-E --> G[Output]
-F --> G[Output]
-G --> H[excel]
-G:::green --> I[open office]:::green
-
-linkStyle 0,3,7,10 stroke:green,stroke-width:4px
-%%linkStyle default stroke:green,stroke-width:1px%%
-
-
-```
+![](/images/compression.png){fig-align="center" width="600"}
 
 ## Inputs
 
@@ -48,7 +22,6 @@ First, you have to select the correct job at the correct spatial-level. The inpu
 -   Matrices
 
     The input `$matrices`takes a list, each item in the list takes the form `["Output_Sheet_name", [P,M,T,U]],`.
-
 
 -   Output format (see outputs)
 
@@ -216,4 +189,4 @@ writeln "Gereed!"
 ```
 :::
 :::::
-:::::::
+::::::
