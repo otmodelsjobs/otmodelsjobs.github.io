@@ -11,31 +11,9 @@ There are 4 types of matrix compression jobs. Each job has a different spatial a
 -   MRDH groot / MRDH groot etm
 -   MRDH Studiegebied
 
-```{mermaid}
+![](/images/compression.png)
 
-
-flowchart LR
-
-%% colors %%
-classDef green fill:#16b552,stroke:#16b552,color:#fff
-
-
-
-A[(Matrices)]:::green --> B[Spatial Level]
-B -->  C[Stedelijkheid] 
-B --> D[Gemeenten] 
-B:::green --> E[MRDH 65x65]:::green
-B --> F[MRDH Studiegebied]
-C --> G[Output]
-D --> G[Output]
-E --> G[Output]
-F --> G[Output]
-G --> H[excel]
-G:::green --> I[open office]:::green
-
-linkStyle 0 stroke:green,stroke-width:2px
-
-
+```         
 ```
 
 ## Inputs
@@ -43,7 +21,7 @@ linkStyle 0 stroke:green,stroke-width:2px
 The inputs for the job are matrices listed under `$matrices`. Different jobs handle the different level of aggregation for you, so you do not have to change anything else in the job (see outputs if you want to change output formats). The input `$matrices`takes a list, each item in the list takes the form `["Output_Sheet_name", [P,M,T,U]],`.
 
 ::: callout-important
-Each spatial level is a different job. If you have changed only the list of matrices in  the job, you can use it without caution. But if you have changed the `# definieer Gebieden` part of the code, that is, if you have changed the definition of each gebied, you have to be careful that each *Centroid Number* is exclusively in ONLY ONE _gebied_. If not, you will get an error.
+Each spatial level is a different job. If you have changed only the list of matrices in the job, you can use it without caution. But if you have changed the `# definieer Gebieden` part of the code, that is, if you have changed the definition of each gebied, you have to be careful that each *Centroid Number* is exclusively in ONLY ONE *gebied*. If not, you will get an error.
 :::
 
 ## Outputs
