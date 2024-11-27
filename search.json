@@ -14,7 +14,7 @@
     "href": "Standard_uitvoer/01_MatrixBewerkingen/intro.html",
     "title": "1  Matrix Bewerkingen",
     "section": "",
-    "text": "1.1 Fratar Methode",
+    "text": "1.1 Fratar Methode\nThis group of jobs deal with various matrix handling techniques. By Miranca and srirama",
     "crumbs": [
       "Standard Uitvoer",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matrix Bewerkingen</span>"
@@ -98,6 +98,16 @@
     ]
   },
   {
+    "objectID": "Routines/intro.html",
+    "href": "Routines/intro.html",
+    "title": "Routines",
+    "section": "",
+    "text": "This folder contains the crypted files.",
+    "crumbs": [
+      "Routines"
+    ]
+  },
+  {
     "objectID": "Standard_uitvoer/06_Bereikbaarheid/intro.html",
     "href": "Standard_uitvoer/06_Bereikbaarheid/intro.html",
     "title": "6  Bereikbaarheid",
@@ -139,16 +149,6 @@
     "crumbs": [
       "Routines",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Milieu</span>"
-    ]
-  },
-  {
-    "objectID": "Routines/intro.html",
-    "href": "Routines/intro.html",
-    "title": "Routines",
-    "section": "",
-    "text": "This folder contains the crypted files.",
-    "crumbs": [
-      "Routines"
     ]
   }
 ]
