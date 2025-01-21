@@ -32,18 +32,26 @@ Be careful! Each line of this job is an input parameter. Read carefully and sele
 ```ruby
 
 ## pmturi load
-vtgkm.load          = [ [1,2,1,103,11,20],    [1,2,3,103,11,20] ]     # verplicht!
+vtgkm.load          = [ [1,2,1,103,11,20],[1,2,3,103,11,20]]# verplicht!
 
 ## opties (pmturi afhankelijk)
 
-#~ vtgkm.factoren      = [ 1.0		 	          1.0                   1.0                    1.0        ]     # default = Dagdeel factor (1.0)
+# default = Dagdeel factor (1.0)
+#~ vtgkm.factoren      = [ 1.0		 	          1.0    1.0    1.0        ]  
+
 vtgkm.netwerk       = [ [2,1],                [2,3]] 
 vtgkm.loadNaam      = [ "Auto_os",            "Auto_as"] 
 
 ## opties voor categorieen:
-vtgkm.variant = ["2016","2020","2023","2030Laag","2030Hoog","2040Hoog"]                                              # default = current variant
-vtgkm.selectie = ["VTGP_2016","VTGP_2020","VTGP_2023","VTGP_2030","VTGP_2030","VTGP_2040"]    # default = hele netwerk
-vtgkm.wegtype = 1                                                                     # default = none
+vtgkm.variant = ["2016","2020","2023","2030Laag","2030Hoog","2040Hoog"] 
+# default = current variant
+
+vtgkm.selectie = ["VTGP_2016","VTGP_2020","VTGP_2023","VTGP_2030",
+"VTGP_2030","VTGP_2040"]    
+# default = hele netwerk
+
+
+vtgkm.wegtype = 1        # default = none
 vtgkm.filterWegtype = [14,15,16,17,18,19,20,21,22,51,99]    
 ```
 

@@ -6,7 +6,13 @@ book:
   title: "VMRDH-Jobs"
   author: 
     name: Srirama Bhamidipati
-  date: now
+    email: sk.bhamidipati@rotterdam.nl
+    affiliations:
+      - name: Gemeente Rotterdam
+        address: Wilhelminakade 179 · 3072 AP 
+        city: Rotterdam
+        
+  date: "now"
   # date-format: YYYY-MM-DDTHH:mm:ssZ
   navbar:
     background: primary
@@ -17,13 +23,11 @@ book:
     - index.qmd
     - part: Standard_uitvoer/intro.qmd
       chapters:
-        - Standard_uitvoer/01_MatrixBewerkingen/intro.qmd
+       # - Standard_uitvoer/01_MatrixBewerkingen/intro.qmd
         - Standard_uitvoer/02_MatrixCompressies/intro.qmd
         - Standard_uitvoer/03_Voertuigprestaties/intro.qmd
-        - Standard_uitvoer/04_Thermopunten/intro.qmd
+       # - Standard_uitvoer/04_Thermopunten/intro.qmd
         - Standard_uitvoer/05_(Skim)Matrix_Exports/intro.qmd
-    - part: Routines/intro.qmd
-      chapters:
         - Standard_uitvoer/06_Bereikbaarheid/intro.qmd
         - Standard_uitvoer/07_SelectedLinkCompress/intro.qmd
         - Standard_uitvoer/08_INEXDO/intro.qmd
