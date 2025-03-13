@@ -54,7 +54,9 @@ format:
     toccolor: blue
     toc-title: Job index
     
-    
+execute:
+  echo: true
+  commit-id: "{{< commit-id >}}"
 
 editor: visual
 
