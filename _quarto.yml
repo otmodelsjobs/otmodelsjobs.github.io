@@ -4,7 +4,7 @@ project:
 
 book:
   title: "VMRDH-Jobs"
-  submitted: "{{<GIT_COMMIT>}}"
+  submitted: ${{ env.git_hash }}
   author: 
     name: Srirama Bhamidipati
     email: sk.bhamidipati@rotterdam.nl
