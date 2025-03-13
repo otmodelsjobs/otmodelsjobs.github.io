@@ -4,9 +4,8 @@ project:
 
 book:
   title: "VMRDH-Jobs"
-  submitted: "{{ env.git_hash }}"
   author: 
-    name: Srirama Bhamidipati
+    name: "{{ env.git_hash }}"
     email: sk.bhamidipati@rotterdam.nl
     affiliations:
       - name: Gemeente Rotterdam
