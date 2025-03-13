@@ -22,7 +22,7 @@ jobs:
         id: hash
         run: echo "git_hash=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_HASH
         
-      - name: print Hash
+      - name: print Hashs
         run: echo "${{ env.hash }}"
 
       - name: Set up Renderer
