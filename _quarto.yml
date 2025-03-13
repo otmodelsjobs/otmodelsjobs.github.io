@@ -4,7 +4,7 @@ project:
 
 book:
   title: "VMRDH-Jobs"
-  submitted: "{{< commit-id >}}"
+  submitted: "{{<GIT_COMMIT>}}"
   author: 
     name: Srirama Bhamidipati
     email: sk.bhamidipati@rotterdam.nl
