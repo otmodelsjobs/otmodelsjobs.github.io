@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - user
+      - commitid
 
 name: User Render and Publish
 
