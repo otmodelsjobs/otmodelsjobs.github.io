@@ -5,5 +5,5 @@ This website acts as a manual to understand the OmniTrans jobs, their purpose, i
 :::
 
 ::: {.content-visible when-format="pdf"}
-This pdf acts as a manual to understand the OmniTrans jobs, their purpose, inputs and outputs.
+This pdf acts as a manual to understand the OmniTrans jobs, their purpose, inputs and outputs.It also allows you to download the jobs and input templates.
 :::
