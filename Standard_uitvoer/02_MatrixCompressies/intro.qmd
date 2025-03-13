@@ -17,7 +17,7 @@ There are 4 types of matrix compression jobs. Each job has a different spatial a
 ```
 
 ## Inputs
-
+Will and Kevin next to each other
 The inputs for the job are matrices listed under `$matrices`. Different jobs handle the different level of aggregation for you, so you do not have to change anything else in the job (see outputs if you want to change output formats). The input `$matrices`takes a list, each item in the list takes the form `["Output_Sheet_name", [P,M,T,U]],`.
 
 ::: callout-important
