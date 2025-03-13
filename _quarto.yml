@@ -4,6 +4,7 @@ project:
 
 book:
   title: "VMRDH-Jobs"
+  submitted: "{{< commit-id >}}"
   author: 
     name: Srirama Bhamidipati
     email: sk.bhamidipati@rotterdam.nl
@@ -56,7 +57,7 @@ format:
     
 execute:
   echo: true
-  commit-id: "{{< commit-id >}}"
+  commit-id: 
 
 editor: visual
 
