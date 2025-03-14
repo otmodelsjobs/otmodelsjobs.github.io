@@ -57,7 +57,7 @@ format:
       text: |
         \usepackage{fancyhdr}
         \pagestyle{fancy}
-        \fancyfoot[C]{{{< env git_hash >}}}
+        \fancyfoot[C]{}
         \renewcommand{\footrulewidth}{0.4pt}
     
 execute:
