@@ -55,7 +55,7 @@ format:
     toc-title: Job index
     include-in-header: header.tex
     variables:
-      git_hash: !expr Sys.getenv("git_hash")
+      git_hash: !expr Sys.getenv("{{< env git_hash >}}")
       
     
 execute:
