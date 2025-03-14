@@ -24,6 +24,10 @@ jobs:
         
       - name: print Hashs
         run: echo "${{ env.git_hash }}"
+        
+      - name: Render get hash
+        env:
+          COMMIT_HASH:${{ github.sha }}
 
       - name: Set up Renderer
         uses: quarto-dev/quarto-actions/setup@v2
