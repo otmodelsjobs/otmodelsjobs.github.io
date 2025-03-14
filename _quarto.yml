@@ -5,7 +5,7 @@ project:
 book:
   title: "VMRDH-Jobs"
   author: 
-    name: "{{< env git_hash >}}"
+    name: Srirama Bhamidipati
     email: sk.bhamidipati@rotterdam.nl
     affiliations:
       - name: Gemeente Rotterdam
@@ -60,3 +60,5 @@ execute:
 
 editor: visual
 
+margin-footer: |
+  "v-{{< env git_hash >}}"
