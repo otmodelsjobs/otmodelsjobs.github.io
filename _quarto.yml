@@ -61,4 +61,7 @@ execute:
 editor: visual
 
 margin-footer: |
-  "v-{{< env git_hash >}}"
+  doc-id-{{< env git_hash >}}
+  
+body-header: | 
+  doc-id-{{< env git_hash >}}
