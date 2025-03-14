@@ -25,7 +25,7 @@ jobs:
       - name: print Hashs
         env:
           COMMIT_HASH: ${{ github.sha }}
-          BRANCH_NAME: ${{ github.ref_name }}
+          #BRANCH_NAME: ${{ github.ref_name }}
         run: echo "${{ env.git_hash }}"
         
      
