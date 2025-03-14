@@ -55,7 +55,8 @@ format:
     toc-title: Job index
     include-in-header: header.tex
     variables:
-      commit_hash: !expr Sys.getenv("COMMIT_HASH")
+      #commit_hash: !expr Sys.getenv("COMMIT_HASH")
+      commit_hash: "`r Sys.getenv('COMMIT_HASH')`"
       
     
 execute:
