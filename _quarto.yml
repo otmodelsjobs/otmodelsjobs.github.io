@@ -53,6 +53,12 @@ format:
     keep-tex: true
     toccolor: blue
     toc-title: Job index
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyfoot[C]{{{< env git_hash >}}}
+        \renewcommand{\footrulewidth}{0.4pt}
     
 execute:
   echo: true
