@@ -53,10 +53,17 @@ format:
     keep-tex: true
     toccolor: blue
     toc-title: Job index
-    include-in-header: header.tex
-    variables:
-      commit_hash: !expr Sys.getenv("COMMIT_HASH")
-      #commit_hash: "`r Sys.getenv('COMMIT_HASH')`"
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyfoot[C]{Commit SHA: \texttt{\SHA}}
+        \renewcommand{\headrulewidth}{0pt}
+        \renewcommand{\footrulewidth}{0.4pt}
+    include-in-header-after-body:
+      text: |
+        \newcommand{\SHA}{\texttt{\detokenize{\jobname-sha}}}
+        \immediate\write18{echo "${SHA}" > \jobname-sha}
       
     
 execute:
@@ -66,7 +73,7 @@ execute:
 editor: visual
 
 margin-footer: |
-  doc-id-{{< env git_hash >}}
+  doc-id-{{< env SHA >}}
   
 body-footer: | 
-  doc-id: {{< env git_hash >}}
+  doc-id: {{< env SHA >}}

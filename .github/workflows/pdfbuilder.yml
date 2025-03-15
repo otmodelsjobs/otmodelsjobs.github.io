@@ -20,13 +20,13 @@ jobs:
         
       - name: Get Git Commit ID
         id: hash
-        run: echo "git_hash=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_ENV
+        run: echo "SHA=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_ENV
         
       - name: print Hashs
         env:
           COMMIT_HASH: ${{ github.sha }}
           #BRANCH_NAME: ${{ github.ref_name }}
-        run: echo "${{ env.git_hash }}"
+        run: echo "${{ env.sha }}"
         
      
         
