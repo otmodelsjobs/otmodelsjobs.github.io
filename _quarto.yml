@@ -57,7 +57,7 @@ format:
       text: |
         \usepackage{fancyhdr}
         \pagestyle{fancy}
-        \fancyfoot[C]{Commit SHA: \texttt{\SHA}}
+        \fancyfoot[C]{Commit SHA: \texttt{$SHA$}}
         \renewcommand{\headrulewidth}{0pt}
         \renewcommand{\footrulewidth}{0.4pt}
     include-in-header-after-body:
