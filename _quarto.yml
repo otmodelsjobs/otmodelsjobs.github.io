@@ -8,7 +8,7 @@ book:
     name: Srirama Bhamidipati
     email: sk.bhamidipati@rotterdam.nl
     affiliations:
-      - name: Gemeente Rotterdam
+      - name: {{< env SHA >}} Gemeente Rotterdam
         address: Wilhelminakade 179 · 3072 AP 
         city: Rotterdam
         
@@ -49,21 +49,11 @@ format:
     code-line-numbers: true
     
   pdf:
-    documentclass: scrreprt
+    documentclass: article
     keep-tex: true
     toccolor: blue
     toc-title: Job index
-    include-in-header:
-      text: |
-        \usepackage{fancyhdr}
-        \pagestyle{fancy}
-        \fancyfoot[C]{Commit SHA: \texttt{$SHA$}}
-        \renewcommand{\headrulewidth}{0pt}
-        \renewcommand{\footrulewidth}{0.4pt}
-    include-in-header-after-body:
-      text: |
-        \newcommand{\SHA}{\texttt{\detokenize{\jobname-sha}}}
-        \immediate\write18{echo "${SHA}" > \jobname-sha}
+    titlepage: true
       
     
 execute:
