@@ -8,7 +8,7 @@ book:
     name: Srirama Bhamidipati
     email: sk.bhamidipati@rotterdam.nl
     affiliations:
-      - name: {{< env SHA >}} 
+      - name: {{< env.SHA >}} 
         address: Wilhelminakade 179 · 3072 AP 
         city: Rotterdam
         
