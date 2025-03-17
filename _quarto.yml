@@ -5,10 +5,10 @@ project:
 book:
   title: "VMRDH-Jobs"
   author: 
-    name: "v-{{< env git_hash >}}"
+    name: Srirama Bhamidipati
     email: sk.bhamidipati@rotterdam.nl
     affiliations:
-      - name: Gemeente Rotterdam
+      - name: {{< env.SHA >}} 
         address: Wilhelminakade 179 · 3072 AP 
         city: Rotterdam
         
@@ -49,10 +49,12 @@ format:
     code-line-numbers: true
     
   pdf:
-    documentclass: scrreprt
+    documentclass: article
     keep-tex: true
     toccolor: blue
     toc-title: Job index
+    titlepage: true
+      
     
 execute:
   echo: true
@@ -60,3 +62,8 @@ execute:
 
 editor: visual
 
+margin-footer: |
+  doc-id-{{< env SHA >}}
+  
+body-footer: | 
+  doc-id: {{< env SHA >}}
