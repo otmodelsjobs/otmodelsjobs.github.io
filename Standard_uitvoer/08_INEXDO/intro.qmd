@@ -24,7 +24,7 @@ Following are the outputs to this job.
 ## Code
 
 ```ruby
-Zone = [1,2,3,4]
+Zone = [1,2,3,4]+[5,6,7,8]
 
 
 ```
