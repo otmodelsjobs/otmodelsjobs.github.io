@@ -32,6 +32,7 @@ book:
         - Standard_uitvoer/07_SelectedLinkCompress/intro.qmd
         - Standard_uitvoer/08_INEXDO/intro.qmd
         - Standard_uitvoer/11_Milieu(Goudappel)/intro.qmd
+    - part: Custom_Jobs/intro.qmd
         
     
  
