@@ -7,13 +7,15 @@
 
 ## Purpose
 
-Some text explaining what the code does.
+INEXDO is voor al het inkomend, uitgaand en doorgaand verkeer door een of meerdere zones.
 
 
 
 ## Inputs
 
-Following are the inputs to this job.
+ - `Zone number(s)` : the zones you want to use
+ - `Matrix location`
+
 
 ## Outputs
 
@@ -21,7 +23,13 @@ Following are the outputs to this job.
 
 ## Code
 
-Download the code.[matrixcompress.rb](../first.rb)
+```ruby
+Zone = [1,2,3,4]
+
+
+```
+
+
 
 
 
