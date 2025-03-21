@@ -69,7 +69,7 @@
     "href": "Standard_uitvoer/08_INEXDO/intro.html",
     "title": "6  INEXDO",
     "section": "",
-    "text": "PurposeInputsOutputsCode\n\n\nSome text explaining what the code does.\n\n\nFollowing are the inputs to this job.\n\n\nFollowing are the outputs to this job.\n\n\nDownload the code.matrixcompress.rb",
+    "text": "PurposeInputsOutputsCode\n\n\nINEXDO is voor al het inkomend, uitgaand en doorgaand verkeer door een of meerdere zones.\n\n\n\nZone number(s) : the zones you want to use\nMatrix location\n\n\n\nFollowing are the outputs to this job.\n\n\nZone = [1,2,3,4]",
     "crumbs": [
       "Standard Uitvoer",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>INEXDO</span>"
