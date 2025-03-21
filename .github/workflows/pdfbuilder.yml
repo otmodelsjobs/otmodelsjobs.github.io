@@ -1,9 +1,9 @@
 on:
   push:
     branches:
-      - commitid
+      - user
 
-name: User Render and Publish
+name: User Document Render and Publish
 
 # you need these permissions to publish to GitHub pages
 permissions: 
