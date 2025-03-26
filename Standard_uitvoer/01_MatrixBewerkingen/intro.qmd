@@ -1,49 +1,38 @@
 # Matrix Bewerkingen
 
-This group of jobs deal with various matrix handling techniques. By Miranca and srirama
+This group of jobs deal with various matrix handling techniques. 
 
-## Fratar Methode 
+## Fratar Methode
 
-
-
-::: {.nav-pills}
-::: {.panel-tabset}
-
+::::: nav-pills
+:::: panel-tabset
 ### Purpose
 
 Look inside each tab to understand what you will get from this job.
-
-
 
 ### Inputs
 
 Following are the inputs to this job.
 
-
-```ruby
+``` ruby
 fratarTest.source_cube = '2020_KAL' # Geef MatrixCube op (hier: 2016_SMC)        
 fratarTest.matrix = [1,2,1,103]     # Geef Matrix (1 PER AANROEP!) (Hier Auto OS)
 ```
-
-
 
 ### Outputs
 
 Following are the outputs to this job.
 
-
-
-```ruby
+``` ruby
 fratarTest.destination_cube = 'FratarDemo' # Resultaatcube 
 ```
-
 
 ### Code
 
 Download the code.[matrixcompress.rb](../../first.rb)
 
 ::: {.content-hidden when-format="pdf"}
-```ruby
+``` ruby
 # voorbeeldscript Matrixbewerkingen - DonorZone
 # Version 1.0 17-10-2022
 requireCrypted $Ot.dirJob+'Standaard uitvoer\Routines\Matrixbewerkingen\UseFratarDistribution.rc' # Geef het pad op naar de UseDonorDistribution.rc (oplevering is gepland in \Routines\Matrixbewerkingen)
@@ -66,21 +55,16 @@ fratarTest.destination_cube = 'FratarDemo' # Resultaatcube waar het resultaat va
 fratarTest.execute
 ```
 :::
+::::
+:::::
 
-:::
-:::
 ## Matrixritten op basis van voorbeeldzone
 
-
-
-::: {.nav-pills}
-::: {.panel-tabset}
-
+:::: nav-pills
+::: panel-tabset
 ### Purpose
 
 Some text explaining what the code does.
-
-
 
 ### Inputs
 
@@ -93,25 +77,16 @@ Following are the outputs to this job.
 ### Code
 
 Download the code.[matrixcompress.rb](../first.rb)
-
-
-
 :::
+::::
 
-:::
 ## Percentage groei ten opzichte van voorbeeldzone
 
-
-
-
-::: {.nav-pills}
-::: {.panel-tabset}
-
+:::: nav-pills
+::: panel-tabset
 ### Purpose
 
 Some text explaining what the code does.
-
-
 
 ### Inputs
 
@@ -124,8 +99,5 @@ Following are the outputs to this job.
 ### Code
 
 Download the code.[matrixcompress.rb](../first.rb)
-
-
-
 :::
-:::
+::::

@@ -1,0 +1,19 @@
+# Weekdagmodule
+
+In the weekdagmodule, there are options to generate shapefiles in GEOMILIEU and CIMLK formats. In these shapefiles, there are several fields. The definition of these fields are as follows:
+
+## Fieldnames in Geomilieu Export
+
+![](images/clipboard-3863380911.png)
+
+## Dagdeel Calculation Periods
+
+```r
+DAY => dag = 12 uur
+EVE => avond = 4 uur
+NI => nacht = 8 uur
+
+Rekenvoorbeeld
+Dag LV * 12 + Avond LV * 4 + Nacht LV * 8 => LV Etmaal
+
+```
