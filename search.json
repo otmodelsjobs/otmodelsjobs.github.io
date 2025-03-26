@@ -85,5 +85,27 @@
       "Standard Uitvoer",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Milieu</span>"
     ]
+  },
+  {
+    "objectID": "Others/Weekdagmodule_variables.html",
+    "href": "Others/Weekdagmodule_variables.html",
+    "title": "8  Weekdagmodule",
+    "section": "",
+    "text": "8.1 Fieldnames in Geomilieu Export\nIn the weekdagmodule, there are options to generate shapefiles in GEOMILIEU and CIMLK formats. In these shapefiles, there are several fields. The definition of these fields are as follows:",
+    "crumbs": [
+      "Others",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Weekdagmodule</span>"
+    ]
+  },
+  {
+    "objectID": "Others/Weekdagmodule_variables.html#dagdeel-calculation-periods",
+    "href": "Others/Weekdagmodule_variables.html#dagdeel-calculation-periods",
+    "title": "8  Weekdagmodule",
+    "section": "8.2 Dagdeel Calculation Periods",
+    "text": "8.2 Dagdeel Calculation Periods\nDAY =&gt; dag = 12 uur\nEVE =&gt; avond = 4 uur\nNI =&gt; nacht = 8 uur\n\nRekenvoorbeeld\nDag LV * 12 + Avond LV * 4 + Nacht LV * 8 =&gt; LV Etmaal",
+    "crumbs": [
+      "Others",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Weekdagmodule</span>"
+    ]
   }
 ]
