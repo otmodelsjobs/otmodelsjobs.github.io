@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -7,21 +8,22 @@
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrreprt}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -107,8 +106,7 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -133,6 +131,20 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
@@ -195,14 +207,12 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={VMRDH-Jobs},
-  pdfauthor={Srirama Bhamidipati},
+  pdfauthor={Document-ID: ?env:git\_hash},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -212,9 +222,8 @@
 
 
 \title{VMRDH-Jobs}
-\author{Srirama Bhamidipati}
-\date{2025-01-21}
-
+\author{Document-ID: \textbf{?env:git\_hash}}
+\date{2025-05-19}
 \begin{document}
 \maketitle
 
@@ -227,13 +236,14 @@
 
 \bookmarksetup{startatroot}
 
-\chapter*{Preface}\label{preface}
-\addcontentsline{toc}{chapter}{Preface}
+\chapter*{VMRDH 3.0}\label{vmrdh-3.0}
+\addcontentsline{toc}{chapter}{VMRDH 3.0}
 
-\markboth{Preface}{Preface}
+\markboth{VMRDH 3.0}{VMRDH 3.0}
 
 This pdf acts as a manual to understand the OmniTrans jobs, their
-purpose, inputs and outputs.
+purpose, inputs and outputs.It also allows you to download the jobs and
+input templates.
 
 \part{Standard Uitvoer}
 
@@ -270,7 +280,7 @@ to change output formats). The input \texttt{\$matrices}takes a list,
 each item in the list takes the form
 \texttt{{[}"Output\_Sheet\_name",\ {[}P,M,T,U{]}{]},}.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, rightrule=.15mm, left=2mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, bottomrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, opacityback=0, bottomtitle=1mm, breakable, toprule=.15mm, leftrule=.75mm, coltitle=black, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, coltitle=black, colframe=quarto-callout-important-color-frame, toprule=.15mm, titlerule=0mm, breakable, bottomrule=.15mm, arc=.35mm, colback=white, left=2mm]
 
 Each spatial level is a different job. If you have changed only the list
 of matrices in the job, you can use it without caution. But if you have
@@ -308,7 +318,7 @@ vehicles indicate higher pollution/ fuel-usage levels for example.
 
 \section{Inputs}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, rightrule=.15mm, left=2mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, bottomrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, opacityback=0, bottomtitle=1mm, breakable, toprule=.15mm, leftrule=.75mm, coltitle=black, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, coltitle=black, colframe=quarto-callout-important-color-frame, toprule=.15mm, titlerule=0mm, breakable, bottomrule=.15mm, arc=.35mm, colback=white, left=2mm]
 
 Be careful! Each line of this job is an input parameter. Read carefully
 and select the pmturi numbers very carefully.
@@ -356,27 +366,27 @@ and select the pmturi numbers very carefully.
 \begin{Highlighting}[]
 
 \CommentTok{\#\# pmturi load}
-\NormalTok{vtgkm}\AttributeTok{.load}          \KeywordTok{=} \KeywordTok{[} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{103}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{20}\KeywordTok{]}\NormalTok{,}\KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{103}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{20}\KeywordTok{]]}\CommentTok{\# verplicht!}
+\NormalTok{vtgkm}\AttributeTok{.load}          \OperatorTok{=} \KeywordTok{[} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{103}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{20}\KeywordTok{]}\NormalTok{,}\KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{103}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{20}\KeywordTok{]]}\CommentTok{\# verplicht!}
 
 \CommentTok{\#\# opties (pmturi afhankelijk)}
 
 \CommentTok{\# default = Dagdeel factor (1.0)}
 \CommentTok{\#\textasciitilde{} vtgkm.factoren      = [ 1.0                    1.0    1.0    1.0        ]  }
 
-\NormalTok{vtgkm}\AttributeTok{.netwerk}       \KeywordTok{=} \KeywordTok{[} \KeywordTok{[}\DecValTok{2}\NormalTok{,}\DecValTok{1}\KeywordTok{]}\NormalTok{,                }\KeywordTok{[}\DecValTok{2}\NormalTok{,}\DecValTok{3}\KeywordTok{]]} 
-\NormalTok{vtgkm}\AttributeTok{.loadNaam}      \KeywordTok{=} \KeywordTok{[} \StringTok{"Auto\_os"}\NormalTok{,            }\StringTok{"Auto\_as"}\KeywordTok{]} 
+\NormalTok{vtgkm}\AttributeTok{.netwerk}       \OperatorTok{=} \KeywordTok{[} \KeywordTok{[}\DecValTok{2}\NormalTok{,}\DecValTok{1}\KeywordTok{]}\NormalTok{,                }\KeywordTok{[}\DecValTok{2}\NormalTok{,}\DecValTok{3}\KeywordTok{]]} 
+\NormalTok{vtgkm}\AttributeTok{.loadNaam}      \OperatorTok{=} \KeywordTok{[} \StringTok{"Auto\_os"}\NormalTok{,            }\StringTok{"Auto\_as"}\KeywordTok{]} 
 
 \CommentTok{\#\# opties voor categorieen:}
-\NormalTok{vtgkm}\AttributeTok{.variant} \KeywordTok{=} \KeywordTok{[}\StringTok{"2016"}\NormalTok{,}\StringTok{"2020"}\NormalTok{,}\StringTok{"2023"}\NormalTok{,}\StringTok{"2030Laag"}\NormalTok{,}\StringTok{"2030Hoog"}\NormalTok{,}\StringTok{"2040Hoog"}\KeywordTok{]} 
+\NormalTok{vtgkm}\AttributeTok{.variant} \OperatorTok{=} \KeywordTok{[}\StringTok{"2016"}\NormalTok{,}\StringTok{"2020"}\NormalTok{,}\StringTok{"2023"}\NormalTok{,}\StringTok{"2030Laag"}\NormalTok{,}\StringTok{"2030Hoog"}\NormalTok{,}\StringTok{"2040Hoog"}\KeywordTok{]} 
 \CommentTok{\# default = current variant}
 
-\NormalTok{vtgkm}\AttributeTok{.selectie} \KeywordTok{=} \KeywordTok{[}\StringTok{"VTGP\_2016"}\NormalTok{,}\StringTok{"VTGP\_2020"}\NormalTok{,}\StringTok{"VTGP\_2023"}\NormalTok{,}\StringTok{"VTGP\_2030"}\NormalTok{,}
+\NormalTok{vtgkm}\AttributeTok{.selectie} \OperatorTok{=} \KeywordTok{[}\StringTok{"VTGP\_2016"}\NormalTok{,}\StringTok{"VTGP\_2020"}\NormalTok{,}\StringTok{"VTGP\_2023"}\NormalTok{,}\StringTok{"VTGP\_2030"}\NormalTok{,}
 \StringTok{"VTGP\_2030"}\NormalTok{,}\StringTok{"VTGP\_2040"}\KeywordTok{]}    
 \CommentTok{\# default = hele netwerk}
 
 
-\NormalTok{vtgkm}\AttributeTok{.wegtype} \KeywordTok{=} \DecValTok{1}        \CommentTok{\# default = none}
-\NormalTok{vtgkm}\AttributeTok{.filterWegtype} \KeywordTok{=} \KeywordTok{[}\DecValTok{14}\NormalTok{,}\DecValTok{15}\NormalTok{,}\DecValTok{16}\NormalTok{,}\DecValTok{17}\NormalTok{,}\DecValTok{18}\NormalTok{,}\DecValTok{19}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{21}\NormalTok{,}\DecValTok{22}\NormalTok{,}\DecValTok{51}\NormalTok{,}\DecValTok{99}\KeywordTok{]}    
+\NormalTok{vtgkm}\AttributeTok{.wegtype} \OperatorTok{=} \DecValTok{1}        \CommentTok{\# default = none}
+\NormalTok{vtgkm}\AttributeTok{.filterWegtype} \OperatorTok{=} \KeywordTok{[}\DecValTok{14}\NormalTok{,}\DecValTok{15}\NormalTok{,}\DecValTok{16}\NormalTok{,}\DecValTok{17}\NormalTok{,}\DecValTok{18}\NormalTok{,}\DecValTok{19}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{21}\NormalTok{,}\DecValTok{22}\NormalTok{,}\DecValTok{51}\NormalTok{,}\DecValTok{99}\KeywordTok{]}    
 \end{Highlighting}
 \end{Shaded}
 
@@ -450,11 +460,18 @@ Download the code.\href{../first.rb}{matrixcompress.rb}
 
 \section{Purpose}
 
-Some text explaining what the code does.
+INEXDO is voor al het inkomend, uitgaand en doorgaand verkeer door een
+of meerdere zones.
 
 \section{Inputs}
 
-Following are the inputs to this job.
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Zone\ number(s)} : the zones you want to use
+\item
+  \texttt{Matrix\ location}
+\end{itemize}
 
 \section{Outputs}
 
@@ -462,7 +479,47 @@ Following are the outputs to this job.
 
 \section{Code}
 
-Download the code.\href{../first.rb}{matrixcompress.rb}
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{Zone} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\KeywordTok{]}\OperatorTok{+}\KeywordTok{[}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{7}\NormalTok{,}\DecValTok{8}\KeywordTok{]}
+
+\end{Highlighting}
+\end{Shaded}
+
+\chapter{Uitsnednetwork}\label{uitsnednetwork}
+
+This job allows you to cut a cordon from the larger network and create
+an OD matrix for this cordon. This is also known as
+\texttt{sub-area\ analysis}.
+
+\subsection{Purpose}
+
+Look inside each tab to understand what you will get from this job.
+
+\subsection{Inputs}
+
+Following are the inputs to this job.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fratarTest}\AttributeTok{.source\_cube} \OperatorTok{=} \VerbatimStringTok{\textquotesingle{}2020\_KAL\textquotesingle{}} \CommentTok{\# Geef MatrixCube op (hier: 2016\_SMC)        }
+\NormalTok{fratarTest}\AttributeTok{.matrix} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{103}\KeywordTok{]}     \CommentTok{\# Geef Matrix (1 PER AANROEP!) (Hier Auto OS)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Outputs}
+
+Following are the outputs to this job.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fratarTest}\AttributeTok{.destination\_cube} \OperatorTok{=} \VerbatimStringTok{\textquotesingle{}FratarDemo\textquotesingle{}} \CommentTok{\# Resultaatcube }
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Code}
+
+Download the code.\href{../../first.rb}{matrixcompress.rb}
 
 \chapter{Milieu}\label{milieu}
 
@@ -479,6 +536,120 @@ Following are the inputs to this job.
 Following are the outputs to this job.
 
 \section{Code}
+
+Download the code.\href{../first.rb}{matrixcompress.rb}
+
+\part{Custom Jobs}
+
+\part{Others}
+
+\chapter{Weekdagmodule}\label{weekdagmodule}
+
+In the weekdagmodule, there are options to generate shapefiles in
+GEOMILIEU and CIMLK formats. In these shapefiles, there are several
+fields. The definition of these fields are as follows:
+
+\section{Fieldnames in Geomilieu
+Export}\label{fieldnames-in-geomilieu-export}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Others/images/clipboard-3863380911.png}}
+
+\section{Dagdeel Calculation Periods}\label{dagdeel-calculation-periods}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DAY }\SpecialCharTok{=\textgreater{}}\NormalTok{ dag }\OtherTok{=} \DecValTok{12}\NormalTok{ uur}
+\NormalTok{EVE }\SpecialCharTok{=\textgreater{}}\NormalTok{ avond }\OtherTok{=} \DecValTok{4}\NormalTok{ uur}
+\NormalTok{NI }\SpecialCharTok{=\textgreater{}}\NormalTok{ nacht }\OtherTok{=} \DecValTok{8}\NormalTok{ uur}
+
+\NormalTok{Rekenvoorbeeld}
+\NormalTok{Dag LV }\SpecialCharTok{*} \DecValTok{12} \SpecialCharTok{+}\NormalTok{ Avond LV }\SpecialCharTok{*} \DecValTok{4} \SpecialCharTok{+}\NormalTok{ Nacht LV }\SpecialCharTok{*} \DecValTok{8} \SpecialCharTok{=\textgreater{}}\NormalTok{ LV Etmaal}
+\end{Highlighting}
+\end{Shaded}
+
+\part{Prototype4}
+
+\chapter*{Why?}\label{why}
+\addcontentsline{toc}{chapter}{Why?}
+
+\markboth{Why?}{Why?}
+
+This model takes a shift from trip-based model to a tour based model.
+
+\section*{Process-Flowchart}\label{process-flowchart}
+\addcontentsline{toc}{section}{Process-Flowchart}
+
+\markright{Process-Flowchart}
+
+\chapter{Modules}\label{modules}
+
+\section{CARMOD Module}\label{carmod-module}
+
+\subsection{Purpose}
+
+Its primary function is to ensure that the car ownership (autobezit)
+within the Model is consistent with the car ownership totals provided by
+the DYNAMO model. Additionally, CARMOD is responsible for spatially
+distributing this car ownership.
+
+\subsection{Inputs}
+
+Following are the inputs to this job.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fratarTest}\AttributeTok{.source\_cube} \OperatorTok{=} \VerbatimStringTok{\textquotesingle{}2020\_KAL\textquotesingle{}} \CommentTok{\# Geef MatrixCube op (hier: 2016\_SMC)        }
+\NormalTok{fratarTest}\AttributeTok{.matrix} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{103}\KeywordTok{]}     \CommentTok{\# Geef Matrix (1 PER AANROEP!) (Hier Auto OS)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{.coeff File}
+
+This file contains the updated Alternative Specific Constants (ASCs) and
+other coefficients for the autobezit model, which are used by the SES
+program
+
+See Online Version for a sample .coeff file.
+
+\subsection{.sum File}
+
+Download the code.\href{../../first.rb}{matrixcompress.rb}
+
+\subsection{.log File}
+
+\section{QUAD}\label{quad}
+
+\subsection{Purpose}
+
+Some text explaining what the code does.
+
+\subsection{Inputs}
+
+Following are the inputs to this job.
+
+\subsection{Outputs}
+
+Following are the outputs to this job.
+
+\subsection{Code}
+
+Download the code.\href{../first.rb}{matrixcompress.rb}
+
+\section{IntraLOS}\label{intralos}
+
+\subsection{Purpose}
+
+Some text explaining what the code does.
+
+\subsection{Inputs}
+
+Following are the inputs to this job.
+
+\subsection{Outputs}
+
+Following are the outputs to this job.
+
+\subsection{Code}
 
 Download the code.\href{../first.rb}{matrixcompress.rb}
 

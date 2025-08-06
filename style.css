@@ -13,3 +13,8 @@ h2{
   font-size: 1.4rem;
 }
 
+div.sourceCode {
+  max-width: 600px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}

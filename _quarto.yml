@@ -2,6 +2,7 @@ project:
   type: book
   output-dir: _output
 
+
 book:
   title: "VMRDH-Jobs"
   author: 
@@ -31,12 +32,18 @@ book:
         - Standard_uitvoer/06_Bereikbaarheid/intro.qmd
         - Standard_uitvoer/07_SelectedLinkCompress/intro.qmd
         - Standard_uitvoer/08_INEXDO/intro.qmd
+        - Standard_uitvoer/09_Uitsnednetwerken(TNO)/intro.qmd
         - Standard_uitvoer/11_Milieu(Goudappel)/intro.qmd
+        
     - part: Custom_Jobs/intro.qmd
     
     - part: Others
       chapters: 
         - Others/Weekdagmodule_variables.qmd
+    - part: Prototype4 
+      chapters:
+        - prototype4/summary.qmd
+        - prototype4/modules.qmd
     
  
 
