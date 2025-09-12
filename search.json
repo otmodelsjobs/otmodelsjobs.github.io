@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "VMRDH-Jobs",
     "section": "",
-    "text": "Preface\nThis website acts as a manual to understand the OmniTrans jobs, their purpose, inputs and outputs. It also allows you to download the jobs and input templates.",
+    "text": "VMRDH 3.0\nThis website acts as a manual to understand the OmniTrans jobs, their purpose, inputs and outputs. It also allows you to download the jobs and input templates.",
     "crumbs": [
-      "Preface"
+      "VMRDH 3.0"
     ]
   },
   {
@@ -76,36 +76,113 @@
     ]
   },
   {
+    "objectID": "Standard_uitvoer/09_Uitsnednetwerken(TNO)/intro.html",
+    "href": "Standard_uitvoer/09_Uitsnednetwerken(TNO)/intro.html",
+    "title": "7  Uitsnednetwork",
+    "section": "",
+    "text": "This job allows you to cut a cordon from the larger network and create an OD matrix for this cordon. This is also known as sub-area analysis.\n\n\nPurposeInputsOutputsCode\n\n\nLook inside each tab to understand what you will get from this job.\n\n\nFollowing are the inputs to this job.\nfratarTest.source_cube = '2020_KAL' # Geef MatrixCube op (hier: 2016_SMC)        \nfratarTest.matrix = [1,2,1,103]     # Geef Matrix (1 PER AANROEP!) (Hier Auto OS)\n\n\nFollowing are the outputs to this job.\nfratarTest.destination_cube = 'FratarDemo' # Resultaatcube \n\n\nDownload the code.matrixcompress.rb\n# voorbeeldscript Matrixbewerkingen - DonorZone\n# Version 1.0 17-10-2022\nrequireCrypted $Ot.dirJob+'Standaard uitvoer\\Routines\\Matrixbewerkingen\\UseFratarDistribution.rc' # Geef het pad op naar de UseDonorDistribution.rc (oplevering is gepland in \\Routines\\Matrixbewerkingen)\n\n# Hier bepalen we per zone de nieuwe doelwaarden voor rijen en kolommen. \n# Dit mag worden opgegeven per zone, per rij of kolom\nrowTargets = {1 =&gt; 5000, 25 =&gt; 200} # Producties opgeven per zone (hier krijgt zone 1 5000 ritten en zone 25 200 ritten)\ncolTargets = {25 =&gt; 100}            # Attracties opgeven per zone (hier krijgt zone 25 100 aankomsten)  \nzoneData = {:rows =&gt; rowTargets, :cols =&gt; colTargets}\n\n\n# Vul hieronder de juiste source_cube en destination_cube in!\n\nfratarTest = UseFratarDistribution.new     # Doe een aanroep naar de FratarModule\nfratarTest.help                            # Laat de Hulp file zien (optioneel)\nfratarTest.source_cube = '2020_KAL' #'2040_StedRef_REM_SMC'        # Geef een MatrixCube op (hier: 2016_SMC)        \nfratarTest.matrix = [1,2,1,103]            # Geef een Matrix op (ENKELE MATRIX PER AANROEP!) (Hier Auto OS)\nfratarTest.targetZoneData = zoneData       # targetZoneData naar de bovengenoemde zonetotalen\nfratarTest.destination_cube = 'FratarDemo' # Resultaatcube waar het resultaat van de bewerking wordt weggeschreven\nfratarTest.execute",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Uitsnednetwork</span>"
+    ]
+  },
+  {
     "objectID": "Standard_uitvoer/11_Milieu(Goudappel)/intro.html",
     "href": "Standard_uitvoer/11_Milieu(Goudappel)/intro.html",
-    "title": "7  Milieu",
+    "title": "8  Milieu",
     "section": "",
     "text": "PurposeInputsOutputsCode\n\n\nSome text explaining what the code does.\n\n\nFollowing are the inputs to this job.\n\n\nFollowing are the outputs to this job.\n\n\nDownload the code.matrixcompress.rb",
     "crumbs": [
       "Standard Uitvoer",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Milieu</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Milieu</span>"
+    ]
+  },
+  {
+    "objectID": "Custom_Jobs/tld/intro-tld.html",
+    "href": "Custom_Jobs/tld/intro-tld.html",
+    "title": "9  Trip Length Distribution",
+    "section": "",
+    "text": "PurposeInputsOutputsCode\n\n\nThis job can create trip length distribution for a normal matrix or for a select link matrix or any matrix. One of these matrices is then combined with a skim matrix of choice\n\n\nFollowing are the inputs to this job. You will also need a encrypted file tld.rc in your job folder.\nThe following parameters are used to select the matrices and create a table.\n\nThe parameter mode_matrix_number: is the matrix number of the trip matrix.\nThe parameter skim_matrix_number: is the matrix number of the skim matrix.\nThe parameters used for the chart are also used for the table.\n\nThe following parameters are used for plotting a chart.\n\nThe parameter x_axis_max: is the maximum distance you want to show on the x-axis.\nThe parameter x_axis_min: is the minimum distance you want to show on the x-axis.\nThe parameter x_axis_interval: is the interval on the x-axis.\n\n$mode_matrix_number = [1,11,10,1] # trip matrix\n$skim_matrix_number = [1,11,10,1,13,1]  # skim matrix\n\n$x_axis_max = 11 # max value on x-axis\n$x_axis_min = 0 # min value on x-axis\n$x_axis_interval =  1 # interval on x-axis\n\n\nFollowing are the outputs to this job:\n\nA tabular format that you can copy paste into excel.\nA chart that you can save as an image.\n\n\n\nDownload the encrypted file tld.rc\n# OmniTRANS Job for 'Delft Tutorial Static'\n# Created 2-9-2025 13:17:16\n# Author 'Srirama'\n\n=begin\nThis script creates a trip length distribution chart based on trip and distance matrices.\nIt uses the OtChart library to visualize the distribution of trips by distance.\n=end\n\nrequire \"OtChart\"\n\n\n\n# INPUTS\n\n$mode_matrix_number = [1,11,10,1] # trip matrix\n$skim_matrix_number = [1,11,10,1,13,1]  # skim matrix\n\n$x_axis_max = 11\n$x_axis_min = 0\n$x_axis_interval =  1\n\n\n\nrequireCrypted($Ot.dirJob+\"tld.rc\")",
+    "crumbs": [
+      "Custom Jobs",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Trip Length Distribution</span>"
     ]
   },
   {
     "objectID": "Others/Weekdagmodule_variables.html",
     "href": "Others/Weekdagmodule_variables.html",
-    "title": "8  Weekdagmodule",
+    "title": "10  Weekdagmodule",
     "section": "",
-    "text": "8.1 Fieldnames in Geomilieu Export\nIn the weekdagmodule, there are options to generate shapefiles in GEOMILIEU and CIMLK formats. In these shapefiles, there are several fields. The definition of these fields are as follows:",
+    "text": "10.1 Fieldnames in Geomilieu Export\nIn the weekdagmodule, there are options to generate shapefiles in GEOMILIEU and CIMLK formats. In these shapefiles, there are several fields. The definition of these fields are as follows:",
     "crumbs": [
       "Others",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Weekdagmodule</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Weekdagmodule</span>"
     ]
   },
   {
     "objectID": "Others/Weekdagmodule_variables.html#dagdeel-calculation-periods",
     "href": "Others/Weekdagmodule_variables.html#dagdeel-calculation-periods",
-    "title": "8  Weekdagmodule",
-    "section": "8.2 Dagdeel Calculation Periods",
-    "text": "8.2 Dagdeel Calculation Periods\nDAY =&gt; dag = 12 uur\nEVE =&gt; avond = 4 uur\nNI =&gt; nacht = 8 uur\n\nRekenvoorbeeld\nDag LV * 12 + Avond LV * 4 + Nacht LV * 8 =&gt; LV Etmaal",
+    "title": "10  Weekdagmodule",
+    "section": "10.2 Dagdeel Calculation Periods",
+    "text": "10.2 Dagdeel Calculation Periods\nDAY =&gt; dag = 12 uur\nEVE =&gt; avond = 4 uur\nNI =&gt; nacht = 8 uur\n\nRekenvoorbeeld\nDag LV * 12 + Avond LV * 4 + Nacht LV * 8 =&gt; LV Etmaal",
     "crumbs": [
       "Others",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Weekdagmodule</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Weekdagmodule</span>"
+    ]
+  },
+  {
+    "objectID": "prototype4/summary.html",
+    "href": "prototype4/summary.html",
+    "title": "Why?",
+    "section": "",
+    "text": "Process-Flowchart\nThis model takes a shift from trip-based model to a tour based model.",
+    "crumbs": [
+      "Prototype4",
+      "Why?"
+    ]
+  },
+  {
+    "objectID": "prototype4/modules.html",
+    "href": "prototype4/modules.html",
+    "title": "11  Modules",
+    "section": "",
+    "text": "11.1 CARMOD Module",
+    "crumbs": [
+      "Prototype4",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Modules</span>"
+    ]
+  },
+  {
+    "objectID": "prototype4/modules.html#carmod-module",
+    "href": "prototype4/modules.html#carmod-module",
+    "title": "11  Modules",
+    "section": "",
+    "text": "PurposeInputs.coeff File.sum File.log File\n\n\nIts primary function is to ensure that the car ownership (autobezit) within the Model is consistent with the car ownership totals provided by the DYNAMO model. Additionally, CARMOD is responsible for spatially distributing this car ownership.\n\n\nFollowing are the inputs to this job.\nfratarTest.source_cube = '2020_KAL' # Geef MatrixCube op (hier: 2016_SMC)        \nfratarTest.matrix = [1,2,1,103]     # Geef Matrix (1 PER AANROEP!) (Hier Auto OS)\n\n\nThis file contains the updated Alternative Specific Constants (ASCs) and other coefficients for the autobezit model, which are used by the SES program\nSee Online Version for a sample .coeff file.\nFile                   carown_711.F12\nTitle            Autobezitsmodel 2014\nConverged                        True\nObservations                    65900\nFinal log (L)                -59204.9\nD.O.F.                             28\nRho²(0)                         0.349\nRho²(c)                         0.186\nEstimated                   11 Oct 23\nScaling                        1.0000\ncar1                         -8.49321\ncar2                        -20.27916\ncar3                        -26.20648\nInc1                           0.9675\nInc2                            1.918\nInc3                            2.147\nNChild1                        0.1743\nNAdults1                       0.8010\nNAdults2                        1.366\nNAdults3                        2.241\nParkTar1                      -0.2247\nParkTar2                      -0.4734\nParkTar3                      -0.5522\nNChild23                       0.3910\nCar0Urb1                       0.4804\nCar0Urb2                        1.287\nCar0Urb3                        2.123\nCar0Urb4                        2.602\nCar0Urb5                        3.594\nCar1Urb1                       0.2703\nCar1Urb2                       0.7291\nCar1Urb3                        1.151\nCar1Urb4                        1.332\nCar1Urb5                        2.025\nCar2Urb1                       0.1584\nCar2Urb2                       0.3535\nCar2Urb3                       0.5864\nCar2Urb4                       0.5864\nCar2Urb5                       0.9144\n\n\nDownload the code.matrixcompress.rb\n# voorbeeldscript Matrixbewerkingen - DonorZone\n# Version 1.0 17-10-2022\nrequireCrypted $Ot.dirJob+'Standaard uitvoer\\Routines\\Matrixbewerkingen\\UseFratarDistribution.rc' # Geef het pad op naar de UseDonorDistribution.rc (oplevering is gepland in \\Routines\\Matrixbewerkingen)\n\n# Hier bepalen we per zone de nieuwe doelwaarden voor rijen en kolommen. \n# Dit mag worden opgegeven per zone, per rij of kolom\nrowTargets = {1 =&gt; 5000, 25 =&gt; 200} # Producties opgeven per zone (hier krijgt zone 1 5000 ritten en zone 25 200 ritten)\ncolTargets = {25 =&gt; 100}            # Attracties opgeven per zone (hier krijgt zone 25 100 aankomsten)  \nzoneData = {:rows =&gt; rowTargets, :cols =&gt; colTargets}\n\n\n# Vul hieronder de juiste source_cube en destination_cube in!\n\nfratarTest = UseFratarDistribution.new     # Doe een aanroep naar de FratarModule\nfratarTest.help                            # Laat de Hulp file zien (optioneel)\nfratarTest.source_cube = '2020_KAL' #'2040_StedRef_REM_SMC'        # Geef een MatrixCube op (hier: 2016_SMC)        \nfratarTest.matrix = [1,2,1,103]            # Geef een Matrix op (ENKELE MATRIX PER AANROEP!) (Hier Auto OS)\nfratarTest.targetZoneData = zoneData       # targetZoneData naar de bovengenoemde zonetotalen\nfratarTest.destination_cube = 'FratarDemo' # Resultaatcube waar het resultaat van de bewerking wordt weggeschreven\nfratarTest.execute\n\n\n04-30-2025 14:49:50\n\nExecutable: C:\\Users\\Downloads\\Srirama\\Srirama_CARMOD\\CARMOD.exe; 04-30-2025 11:25:34; 2012160 bytes\n\nRunning on computer: LME5CD349GDM2\n\nReading settings from: carmod.ctl; 04-30-2025 14:49:38; 404 bytes\n\nCars per hh for 3+ alternative: 4.092\n\n           Iter     No Car Hhs      1 Car HHs     2 Cars HHs     3 Cars Hhs     Total Cars\n\n        Target:        2065325        5054103        1859479         356451       10231504\n\n              1        2201659        4941227        1877052         322982       10016831\n              2        2116130        5038802        1839383         348604       10143905\n              3        2087124        5052505        1850115         353176       10197778\n              4        2075485        5056096        1856200         355139       10221569\n              5        2070613        5057351        1858918         356037       10231937\n              6        2068543        5057844        1860097         356435       10236416\n              7        2067660        5058047        1860604         356609       10238342\n              8        2067282        5058133        1860821         356683       10239170\n              9        2067120        5058169        1860915         356716       10239525\n             10        2067050        5058185        1860955         356729       10239677\n             11        2067020        5058192        1860972         356735       10239742\n             12        2067007        5058195        1860980         356738       10239770\n             13        2067002        5058196        1860983         356739       10239782\n             14        2067000        5058196        1860984         356739       10239787\n             15        2066999        5058197        1860985         356740       10239790\n             16        2066998        5058197        1860985         356740       10239791\n             17        2066998        5058197        1860985         356740       10239791\n             18        2066998        5058197        1860985         356740       10239791\n             19        2066998        5058197        1860985         356740       10239791\n             20        2066998        5058197        1860985         356740       10239791\n             21        2066998        5058197        1860985         356740       10239791\n             22        2066998        5058197        1860985         356740       10239791\n             23        2066998        5058197        1860985         356740       10239791\n             24        2066998        5058197        1860985         356740       10239791\n             25        2066998        5058197        1860985         356740       10239791\n             26        2066998        5058197        1860985         356740       10239791\n             27        2066998        5058197        1860985         356740       10239791\n             28        2066998        5058197        1860985         356740       10239791\n             29        2066998        5058197        1860985         356740       10239791\n             30        2066998        5058197        1860985         356740       10239791\n\n     Difference                          4094           1506            289           8287\n   % Difference                         0.081          0.081          0.081          0.081\n\nInput files:\n\nCARCOEF: C:\\Users\\Downloads\\Srirama\\Srirama_CARMOD\\Input\\carmod.coef; 04-30-2025 11:25:34; 1521 bytes\nZONEDAT: C:\\Users\\Downloads\\Srirama\\Srirama_CARMOD\\Input\\_SEG_VMRDHv4_2040H_5.csv; 04-30-2025 11:25:34; 1802572 bytes\nZONCONST: C:\\Users\\Downloads\\Srirama\\Srirama_CARMOD\\Input\\carmod.sum; 04-30-2025 11:25:34; 887718 bytes\nHSAMP: C:\\Users\\Downloads\\Srirama\\Srirama_CARMOD\\Input\\hsamp.dat; 04-30-2025 11:25:34; 5346288 bytes\nPOPU: C:\\Users\\Downloads\\Srirama\\Srirama_CARMOD\\Input\\popu.bin; 04-30-2025 11:25:34; 23544864 bytes\n\nOutput files:\n\nSUMMARY: C:\\Users\\Downloads\\Srirama\\Srirama_CARMOD\\carmod_30.sum; 04-30-2025 15:23:34; 887718 bytes\nTWEAK: C:\\Users\\Downloads\\Srirama\\Srirama_CARMOD\\carmod_30.coef; 04-30-2025 15:23:34; 1521 bytes\n\n04-30-2025 15:23:33\n\nRun time: 0 hour 33 min 43 sec",
+    "crumbs": [
+      "Prototype4",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Modules</span>"
+    ]
+  },
+  {
+    "objectID": "prototype4/modules.html#quad",
+    "href": "prototype4/modules.html#quad",
+    "title": "11  Modules",
+    "section": "11.2 QUAD",
+    "text": "11.2 QUAD\n\n\nPurposeInputsOutputsCode\n\n\nSome text explaining what the code does.\n\n\nFollowing are the inputs to this job.\n\n\nFollowing are the outputs to this job.\n\n\nDownload the code.matrixcompress.rb",
+    "crumbs": [
+      "Prototype4",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Modules</span>"
+    ]
+  },
+  {
+    "objectID": "prototype4/modules.html#intralos",
+    "href": "prototype4/modules.html#intralos",
+    "title": "11  Modules",
+    "section": "11.3 IntraLOS",
+    "text": "11.3 IntraLOS\n\n\nPurposeInputsOutputsCode\n\n\nSome text explaining what the code does.\n\n\nFollowing are the inputs to this job.\n\n\nFollowing are the outputs to this job.\n\n\nDownload the code.matrixcompress.rb",
+    "crumbs": [
+      "Prototype4",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Modules</span>"
     ]
   }
 ]

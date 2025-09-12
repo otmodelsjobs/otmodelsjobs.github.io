@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Milieu – VMRDH-Jobs</title>
+<title>9&nbsp; Trip Length Distribution – VMRDH-Jobs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../Custom_Jobs/intro.html" rel="next">
-<link href="../../Standard_uitvoer/09_Uitsnednetwerken(TNO)/intro.html" rel="prev">
+<link href="../../Others/Weekdagmodule_variables.html" rel="next">
+<link href="../../Custom_Jobs/intro.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -96,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Standard_uitvoer/intro.html">Standard Uitvoer</a></li><li class="breadcrumb-item"><a href="../../Standard_uitvoer/11_Milieu(Goudappel)/intro.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Milieu</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Custom_Jobs/intro.html">Custom Jobs</a></li><li class="breadcrumb-item"><a href="../../Custom_Jobs/tld/intro-tld.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trip Length Distribution</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -167,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Standard_uitvoer/11_Milieu(Goudappel)/intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../Standard_uitvoer/11_Milieu(Goudappel)/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Milieu</span></span></a>
   </div>
 </li>
@@ -184,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Custom_Jobs/tld/intro-tld.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Custom_Jobs/tld/intro-tld.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trip Length Distribution</span></span></a>
   </div>
 </li>
@@ -241,9 +276,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Standard_uitvoer/intro.html">Standard Uitvoer</a></li><li class="breadcrumb-item"><a href="../../Standard_uitvoer/11_Milieu(Goudappel)/intro.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Milieu</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Custom_Jobs/intro.html">Custom Jobs</a></li><li class="breadcrumb-item"><a href="../../Custom_Jobs/tld/intro-tld.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trip Length Distribution</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Milieu</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trip Length Distribution</span></h1>
 </div>
 
 
@@ -265,16 +300,63 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Purpose</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Inputs</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Outputs</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Some text explaining what the code does.</p>
+<p>This job can create trip length distribution for a normal matrix or for a select link matrix or any matrix. One of these matrices is then combined with a skim matrix of choice</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Following are the inputs to this job.</p>
+<p>Following are the inputs to this job. You will also need a encrypted file tld.rc in your job folder.</p>
+<p>The following parameters are used to select the matrices and create a table.</p>
+<ul>
+<li>The parameter <code>mode_matrix_number</code>: is the matrix number of the trip matrix.</li>
+<li>The parameter <code>skim_matrix_number</code>: is the matrix number of the skim matrix.</li>
+<li>The parameters used for the chart are also used for the table.</li>
+</ul>
+<p>The following parameters are used for plotting a chart.</p>
+<ul>
+<li>The parameter <code>x_axis_max</code>: is the maximum distance you want to show on the x-axis.</li>
+<li>The parameter <code>x_axis_min</code>: is the minimum distance you want to show on the x-axis.</li>
+<li>The parameter <code>x_axis_interval</code>: is the interval on the x-axis.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="va">$x_axis_max</span> <span class="op">=</span> <span class="dv">11</span> <span class="co"># max value on x-axis</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="va">$x_axis_min</span> <span class="op">=</span> <span class="dv">0</span> <span class="co"># min value on x-axis</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">1</span> <span class="co"># interval on x-axis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Following are the outputs to this job.</p>
+<p>Following are the outputs to this job:</p>
+<ul>
+<li><p>A tabular format that you can copy paste into excel.</p></li>
+<li><p>A chart that you can save as an image.</p></li>
+</ul>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>Download the code.<a href="../first.rb">matrixcompress.rb</a></p>
+<p>Download the encrypted file <a href="./tld.rc">tld.rc</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># OmniTRANS Job for 'Delft Tutorial Static'</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># Created 2-9-2025 13:17:16</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># Author 'Srirama'</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co">=begin</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co">This script creates a trip length distribution chart based on trip and distance matrices.</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co">It uses the OtChart library to visualize the distribution of trips by distance.</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">=end</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="fu">require</span> <span class="st">"OtChart"</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># INPUTS</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="va">$x_axis_max</span> <span class="op">=</span> <span class="dv">11</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="va">$x_axis_min</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">1</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a></span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a></span>
+<span id="cb2-25"><a href="#cb2-25"></a>requireCrypted(<span class="va">$Ot</span><span class="at">.dirJob</span><span class="op">+</span><span class="st">"tld.rc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -684,13 +766,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../Standard_uitvoer/09_Uitsnednetwerken(TNO)/intro.html" class="pagination-link" aria-label="Uitsnednetwork">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Uitsnednetwork</span></span>
+      <a href="../../Custom_Jobs/intro.html" class="pagination-link" aria-label="Custom Jobs">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Custom Jobs</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../Custom_Jobs/intro.html" class="pagination-link" aria-label="Custom Jobs">
-        <span class="nav-page-text">Custom Jobs</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Others/Weekdagmodule_variables.html" class="pagination-link" aria-label="Weekdagmodule">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Weekdagmodule</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
