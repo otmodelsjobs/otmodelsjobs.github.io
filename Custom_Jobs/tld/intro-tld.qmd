@@ -1,0 +1,76 @@
+# Trip Length Distribution
+
+::::: nav-pills
+:::: panel-tabset
+### Purpose
+
+This job can create trip length distribution for a normal matrix or for a select link matrix or any matrix. One of these matrices is then combined with a skim matrix of choice
+
+### Inputs
+
+Following are the inputs to this job. You will also need a encrypted file tld.rc in your job folder. 
+
+The following parameters are used to select the matrices and create a table.
+
+- The parameter `mode_matrix_number`: is the matrix number of the trip matrix.
+- The parameter `skim_matrix_number`: is the matrix number of the skim matrix.
+- The parameters used for the chart are also used for the table.
+
+The following parameters are used for plotting a chart. 
+
+- The parameter `x_axis_max`: is the maximum distance you want to show on the x-axis. 
+- The parameter `x_axis_min`: is the minimum distance you want to show on the x-axis.
+- The parameter `x_axis_interval`: is the interval on the x-axis.
+
+``` ruby
+$mode_matrix_number = [1,11,10,1] # trip matrix
+$skim_matrix_number = [1,11,10,1,13,1]  # skim matrix
+
+$x_axis_max = 11 # max value on x-axis
+$x_axis_min = 0 # min value on x-axis
+$x_axis_interval =  1 # interval on x-axis
+```
+
+### Outputs
+
+Following are the outputs to this job:
+
+-    A tabular format that you can copy paste into excel.
+
+-    A chart that you can save as an image.
+
+### Code
+
+Download the encrypted file [tld.rc](./tld.rc)
+
+::: {.content-hidden when-format="pdf"}
+``` ruby
+# OmniTRANS Job for 'Delft Tutorial Static'
+# Created 2-9-2025 13:17:16
+# Author 'Srirama'
+
+=begin
+This script creates a trip length distribution chart based on trip and distance matrices.
+It uses the OtChart library to visualize the distribution of trips by distance.
+=end
+
+require "OtChart"
+
+
+
+# INPUTS
+
+$mode_matrix_number = [1,11,10,1] # trip matrix
+$skim_matrix_number = [1,11,10,1,13,1]  # skim matrix
+
+$x_axis_max = 11
+$x_axis_min = 0
+$x_axis_interval =  1
+
+
+
+requireCrypted($Ot.dirJob+"tld.rc")
+```
+:::
+::::
+:::::

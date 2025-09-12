@@ -36,6 +36,8 @@ book:
         - Standard_uitvoer/11_Milieu(Goudappel)/intro.qmd
         
     - part: Custom_Jobs/intro.qmd
+      chapters:
+        - Custom_Jobs/tld/intro-tld.qmd
     
     - part: Others
       chapters: 
