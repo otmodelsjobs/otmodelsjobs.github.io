@@ -43,15 +43,16 @@ Following are the outputs to this job:
 
 Download the encrypted file [tld.rc](./tld.rc)
 
-::: {.content-hidden when-format="pdf"}
+
 ``` ruby
 # OmniTRANS Job for 'Delft Tutorial Static'
 # Created 2-9-2025 13:17:16
 # Author 'Srirama'
 
 =begin
-This script creates a trip length distribution chart based on trip and distance matrices.
-It uses the OtChart library to visualize the distribution of trips by distance.
+This script creates a trip length distribution chart 
+based on trip and distance matrices. It uses the OtChart library
+to visualize the distribution of trips by distance.
 =end
 
 require "OtChart"
@@ -71,6 +72,6 @@ $x_axis_interval =  1
 
 requireCrypted($Ot.dirJob+"tld.rc")
 ```
-:::
+
 ::::
 :::::
