@@ -310,12 +310,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The parameter <code>skim_matrix_number</code>: is the matrix number of the skim matrix.</li>
 <li>The parameters used for the chart are also used for the table.</li>
 </ul>
-<p>The following parameters are used for plotting a chart.</p>
+<p>The following parameters are used for plotting a chart. These 3 values will come based on the skim matrix.</p>
 <ul>
 <li>The parameter <code>x_axis_max</code>: is the maximum distance you want to show on the x-axis.</li>
 <li>The parameter <code>x_axis_min</code>: is the minimum distance you want to show on the x-axis.</li>
 <li>The parameter <code>x_axis_interval</code>: is the interval on the x-axis.</li>
 </ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To specify the x axis min max, open your skim matrix in Omnitrans and check the min max values. Be sure to check that the <em>Total trips in the matrix</em> is same as <em>Total trips in the frequency table</em>. Both these values are shown in the output of this job. If they are not the same, your classes in the frequency table do not cover the entire range of distances in the skim matrix.</p>
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
