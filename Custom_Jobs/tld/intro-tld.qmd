@@ -16,11 +16,15 @@ The following parameters are used to select the matrices and create a table.
 - The parameter `skim_matrix_number`: is the matrix number of the skim matrix.
 - The parameters used for the chart are also used for the table.
 
-The following parameters are used for plotting a chart. 
+The following parameters are used for plotting a chart. These 3 values will come based on the skim matrix.
 
 - The parameter `x_axis_max`: is the maximum distance you want to show on the x-axis. 
 - The parameter `x_axis_min`: is the minimum distance you want to show on the x-axis.
 - The parameter `x_axis_interval`: is the interval on the x-axis.
+
+::: callout-important
+To specify the x axis min max, open your skim matrix in Omnitrans and check the min max values. Be sure to check that the _Total trips in the matrix_ is same as _Total trips in the frequency table_. Both these values are shown in the output of this job. If they are not the same, your classes in the frequency table do not cover the entire range of distances in the skim matrix.
+:::
 
 ``` ruby
 $mode_matrix_number = [1,11,10,1] # trip matrix
