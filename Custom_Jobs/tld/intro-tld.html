@@ -337,26 +337,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3"></a><span class="co"># Author 'Srirama'</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a></span>
 <span id="cb2-5"><a href="#cb2-5"></a><span class="co">=begin</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co">This script creates a trip length distribution chart based on trip and distance matrices.</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">It uses the OtChart library to visualize the distribution of trips by distance.</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co">=end</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="fu">require</span> <span class="st">"OtChart"</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co">This script creates a trip length distribution chart </span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co">based on trip and distance matrices. It uses the OtChart library</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">to visualize the distribution of trips by distance.</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co">=end</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="fu">require</span> <span class="st">"OtChart"</span></span>
 <span id="cb2-12"><a href="#cb2-12"></a></span>
 <span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># INPUTS</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="va">$x_axis_max</span> <span class="op">=</span> <span class="dv">11</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="va">$x_axis_min</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">1</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="co"># INPUTS</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="va">$x_axis_max</span> <span class="op">=</span> <span class="dv">11</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="va">$x_axis_min</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">1</span></span>
 <span id="cb2-23"><a href="#cb2-23"></a></span>
 <span id="cb2-24"><a href="#cb2-24"></a></span>
-<span id="cb2-25"><a href="#cb2-25"></a>requireCrypted(<span class="va">$Ot</span><span class="at">.dirJob</span><span class="op">+</span><span class="st">"tld.rc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-25"><a href="#cb2-25"></a></span>
+<span id="cb2-26"><a href="#cb2-26"></a>requireCrypted(<span class="va">$Ot</span><span class="at">.dirJob</span><span class="op">+</span><span class="st">"tld.rc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
