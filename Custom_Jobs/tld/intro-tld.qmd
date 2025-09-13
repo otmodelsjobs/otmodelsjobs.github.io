@@ -1,12 +1,18 @@
 # Trip Length Distribution
 
+## Two Methods
+
+This job can be run in two ways.The first method uses regular ranges for the x-axis and the second method uses irregular ranges.The regular ranges are specified using a min, max and interval. The irregular ranges are specified using an array of lower limits and an array of upper limits.
+
 ::::: nav-pills
 :::: panel-tabset
 ### Purpose
 
 This job can create trip length distribution for a normal matrix or for a select link matrix or any matrix. One of these matrices is then combined with a skim matrix of choice
 
-### Inputs
+### Inputs 
+
+**Method 1 - Regular Ranges**
 
 Following are the inputs to this job. You will also need a encrypted file tld.rc in your job folder. 
 
@@ -23,7 +29,7 @@ The following parameters are used for plotting a chart. These 3 values will come
 - The parameter `x_axis_interval`: is the interval on the x-axis.
 
 ::: callout-important
-To specify the x axis min max, open your skim matrix in Omnitrans and check the min max values. Be sure to check that the _Total trips in the matrix_ is same as _Total trips in the frequency table_. Both these values are shown in the output of this job. If they are not the same, your classes in the frequency table do not cover the entire range of distances in the skim matrix.
+To specify the x-axis min max, open your skim matrix in Omnitrans and check the min max values. Be sure to check that the _Total trips in the matrix_ is same as _Total trips in the frequency table_. Both these values are shown in the output of this job. If they are not the same, your classes in the frequency table do not cover the entire range of distances in the skim matrix.
 :::
 
 ``` ruby
@@ -35,13 +41,48 @@ $x_axis_min = 0 # min value on x-axis
 $x_axis_interval =  1 # interval on x-axis
 ```
 
+
+
+**Method 2 - Irregular Ranges**
+
+Following are the inputs to this job. You will also need a encrypted file tld.rc in your job folder. 
+
+The following parameters are used to select the matrices and create a table.
+
+- The parameter `mode_matrix_number`: is the matrix number of the trip matrix.
+- The parameter `skim_matrix_number`: is the matrix number of the skim matrix.
+- ~~The parameters used for the chart are also used for the table.~~
+
+The following parameters are used for a generating a frequency table. These 2 values will come based on the skim matrix.
+
+
+- The parameter `x_axis_min`: is an array of lower limits of the class on x-axis.
+- The parameter `x_axis_max`: is an array of upper limits of the class on x-axis. 
+- The parameter `x_axis_interval`: is always set to zero.
+
+::: callout-important
+To specify the x-axis min max, open your skim matrix in Omnitrans and check the min max values. Be sure to check that the _Total trips in the matrix_ is same as _Total trips in the frequency table_. Both these values are shown in the output of this job. If they are not the same, your classes in the frequency table do not cover the entire range of distances in the skim matrix.
+:::
+
+``` ruby
+$mode_matrix_number = [1,11,10,1] # trip matrix
+$skim_matrix_number = [1,11,10,1,13,1]  # skim matrix
+
+$x_axis_min = [0,10,20,40] # lower limits
+$x_axis_max = [10,20,40,100] # upper limits
+$x_axis_interval =  0 # interval on x-axis
+```
+
+
 ### Outputs
 
 Following are the outputs to this job:
 
 -    A tabular format that you can copy paste into excel.
 
--    A chart that you can save as an image.
+-    A chart that you can save as an image
+
+-    No chart is created for irregular ranges (Method 2).
 
 ### Code
 
@@ -68,10 +109,14 @@ require "OtChart"
 $mode_matrix_number = [1,11,10,1] # trip matrix
 $skim_matrix_number = [1,11,10,1,13,1]  # skim matrix
 
-$x_axis_max = 11
 $x_axis_min = 0
+$x_axis_max = 11
 $x_axis_interval =  1
 
+# Uncomment the following lines for irregular ranges
+# $x_axis_min = [0,10,20,40] # lower limits
+# $x_axis_max = [10,20,40,100] # upper limits
+# $x_axis_interval =  0 # interval on x-axis
 
 
 requireCrypted($Ot.dirJob+"tld.rc")
