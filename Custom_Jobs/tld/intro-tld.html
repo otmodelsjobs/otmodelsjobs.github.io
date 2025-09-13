@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,14 +69,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../Custom_Jobs/intro.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7270adb0428f9bb6f6d8c62bbfe40f1b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dcbf369ae24d98acfba661eb5e68a4cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -116,6 +117,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">VMRDH-Jobs</span>
     </a>
@@ -141,6 +144,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -270,8 +277,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Job index</h2>
+   
+  <ul>
+  <li><a href="#two-methods" id="toc-two-methods" class="nav-link active" data-scroll-target="#two-methods"><span class="header-section-number">9.1</span> Two Methods</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -295,14 +308,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="two-methods" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="two-methods"><span class="header-section-number">9.1</span> Two Methods</h2>
+<p>This job can be run in two ways.The first method uses regular ranges for the x-axis and the second method uses irregular ranges.The regular ranges are specified using a min, max and interval. The irregular ranges are specified using an array of lower limits and an array of upper limits.</p>
 <div class="nav-pills">
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Purpose</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Inputs</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Outputs</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Code</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Purpose</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Inputs</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Outputs</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>This job can create trip length distribution for a normal matrix or for a select link matrix or any matrix. One of these matrices is then combined with a skim matrix of choice</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><strong>Method 1 - Regular Ranges</strong></p>
 <p>Following are the inputs to this job. You will also need a encrypted file tld.rc in your job folder.</p>
 <p>The following parameters are used to select the matrices and create a table.</p>
 <ul>
@@ -326,57 +343,96 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To specify the x axis min max, open your skim matrix in Omnitrans and check the min max values. Be sure to check that the <em>Total trips in the matrix</em> is same as <em>Total trips in the frequency table</em>. Both these values are shown in the output of this job. If they are not the same, your classes in the frequency table do not cover the entire range of distances in the skim matrix.</p>
+<p>To specify the x-axis min max, open your skim matrix in Omnitrans and check the min max values. Be sure to check that the <em>Total trips in the matrix</em> is same as <em>Total trips in the frequency table</em>. Both these values are shown in the output of this job. If they are not the same, your classes in the frequency table do not cover the entire range of distances in the skim matrix.</p>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="va">$x_axis_max</span> <span class="op">=</span> <span class="dv">11</span> <span class="co"># max value on x-axis</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="va">$x_axis_min</span> <span class="op">=</span> <span class="dv">0</span> <span class="co"># min value on x-axis</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">1</span> <span class="co"># interval on x-axis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">1</span> <span class="co"># interval on x-axis</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Method 2 - Irregular Ranges</strong></p>
+<p>Following are the inputs to this job. You will also need a encrypted file tld.rc in your job folder.</p>
+<p>The following parameters are used to select the matrices and create a table.</p>
+<ul>
+<li>The parameter <code>mode_matrix_number</code>: is the matrix number of the trip matrix.</li>
+<li>The parameter <code>skim_matrix_number</code>: is the matrix number of the skim matrix.</li>
+<li><del>The parameters used for the chart are also used for the table.</del></li>
+</ul>
+<p>The following parameters are used for a generating a frequency table. These 2 values will come based on the skim matrix.</p>
+<ul>
+<li>The parameter <code>x_axis_min</code>: is an array of lower limits of the class on x-axis.</li>
+<li>The parameter <code>x_axis_max</code>: is an array of upper limits of the class on x-axis.</li>
+<li>The parameter <code>x_axis_interval</code>: is always set to zero.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To specify the x-axis min max, open your skim matrix in Omnitrans and check the min max values. Be sure to check that the <em>Total trips in the matrix</em> is same as <em>Total trips in the frequency table</em>. Both these values are shown in the output of this job. If they are not the same, your classes in the frequency table do not cover the entire range of distances in the skim matrix.</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb2-1"><a href="#cb2-1"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="va">$x_axis_min</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">40</span><span class="kw">]</span> <span class="co"># lower limits</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="va">$x_axis_max</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">40</span>,<span class="dv">100</span><span class="kw">]</span> <span class="co"># upper limits</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">0</span> <span class="co"># interval on x-axis</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>Following are the outputs to this job:</p>
 <ul>
 <li><p>A tabular format that you can copy paste into excel.</p></li>
-<li><p>A chart that you can save as an image.</p></li>
+<li><p>A chart that you can save as an image</p></li>
+<li><p>No chart is created for irregular ranges (Method 2).</p></li>
 </ul>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <p>Download the encrypted file <a href="./tld.rc">tld.rc</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># OmniTRANS Job for 'Delft Tutorial Static'</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># Created 2-9-2025 13:17:16</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># Author 'Srirama'</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co">=begin</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co">This script creates a trip length distribution chart </span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">based on trip and distance matrices. It uses the OtChart library</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co">to visualize the distribution of trips by distance.</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="co">=end</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="fu">require</span> <span class="st">"OtChart"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a></span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="co"># INPUTS</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="va">$x_axis_max</span> <span class="op">=</span> <span class="dv">11</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="va">$x_axis_min</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">1</span></span>
-<span id="cb2-23"><a href="#cb2-23"></a></span>
-<span id="cb2-24"><a href="#cb2-24"></a></span>
-<span id="cb2-25"><a href="#cb2-25"></a></span>
-<span id="cb2-26"><a href="#cb2-26"></a>requireCrypted(<span class="va">$Ot</span><span class="at">.dirJob</span><span class="op">+</span><span class="st">"tld.rc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># OmniTRANS Job for 'Delft Tutorial Static'</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># Created 2-9-2025 13:17:16</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># Author 'Srirama'</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">=begin</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co">This script creates a trip length distribution chart </span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co">based on trip and distance matrices. It uses the OtChart library</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co">to visualize the distribution of trips by distance.</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co">=end</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="fu">require</span> <span class="st">"OtChart"</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13"></a></span>
+<span id="cb3-14"><a href="#cb3-14"></a></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="co"># INPUTS</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="va">$mode_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="kw">]</span> <span class="co"># trip matrix</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="va">$skim_matrix_number</span> <span class="op">=</span> <span class="kw">[</span><span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">10</span>,<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">1</span><span class="kw">]</span>  <span class="co"># skim matrix</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="va">$x_axis_min</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="va">$x_axis_max</span> <span class="op">=</span> <span class="dv">11</span></span>
+<span id="cb3-22"><a href="#cb3-22"></a><span class="va">$x_axis_interval</span> <span class="op">=</span>  <span class="dv">1</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a></span>
+<span id="cb3-24"><a href="#cb3-24"></a><span class="co"># Uncomment the following lines for irregular ranges</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a><span class="co"># $x_axis_min = [0,10,20,40] # lower limits</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a><span class="co"># $x_axis_max = [10,20,40,100] # upper limits</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a><span class="co"># $x_axis_interval =  0 # interval on x-axis</span></span>
+<span id="cb3-28"><a href="#cb3-28"></a></span>
+<span id="cb3-29"><a href="#cb3-29"></a></span>
+<span id="cb3-30"><a href="#cb3-30"></a>requireCrypted(<span class="va">$Ot</span><span class="at">.dirJob</span><span class="op">+</span><span class="st">"tld.rc"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -430,13 +486,14 @@ Important
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
