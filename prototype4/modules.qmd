@@ -1,0 +1,221 @@
+# Modules
+
+
+
+## CARMOD Module
+
+::::: nav-pills
+:::: panel-tabset
+### Purpose
+
+Its primary function is to ensure that the car ownership (autobezit) within the Model is consistent with the car ownership totals provided by the DYNAMO model. Additionally, CARMOD is responsible for spatially distributing this car ownership.
+
+### Inputs
+
+Following are the inputs to this job.
+
+``` ruby
+fratarTest.source_cube = '2020_KAL' # Geef MatrixCube op (hier: 2016_SMC)        
+fratarTest.matrix = [1,2,1,103]     # Geef Matrix (1 PER AANROEP!) (Hier Auto OS)
+```
+
+###  .coeff File
+
+This file contains the updated Alternative Specific Constants (ASCs) and other coefficients for the autobezit model, which are used by the SES program
+
+See Online Version for a sample .coeff file.
+
+:::{.content-visible when-format="html"}
+```txt
+File                   carown_711.F12
+Title            Autobezitsmodel 2014
+Converged                        True
+Observations                    65900
+Final log (L)                -59204.9
+D.O.F.                             28
+Rho²(0)                         0.349
+Rho²(c)                         0.186
+Estimated                   11 Oct 23
+Scaling                        1.0000
+car1                         -8.49321
+car2                        -20.27916
+car3                        -26.20648
+Inc1                           0.9675
+Inc2                            1.918
+Inc3                            2.147
+NChild1                        0.1743
+NAdults1                       0.8010
+NAdults2                        1.366
+NAdults3                        2.241
+ParkTar1                      -0.2247
+ParkTar2                      -0.4734
+ParkTar3                      -0.5522
+NChild23                       0.3910
+Car0Urb1                       0.4804
+Car0Urb2                        1.287
+Car0Urb3                        2.123
+Car0Urb4                        2.602
+Car0Urb5                        3.594
+Car1Urb1                       0.2703
+Car1Urb2                       0.7291
+Car1Urb3                        1.151
+Car1Urb4                        1.332
+Car1Urb5                        2.025
+Car2Urb1                       0.1584
+Car2Urb2                       0.3535
+Car2Urb3                       0.5864
+Car2Urb4                       0.5864
+Car2Urb5                       0.9144
+
+```
+:::
+
+### .sum File
+
+Download the code.[matrixcompress.rb](../../first.rb)
+
+::: {.content-hidden when-format="pdf"}
+``` ruby
+# voorbeeldscript Matrixbewerkingen - DonorZone
+# Version 1.0 17-10-2022
+requireCrypted $Ot.dirJob+'Standaard uitvoer\Routines\Matrixbewerkingen\UseFratarDistribution.rc' # Geef het pad op naar de UseDonorDistribution.rc (oplevering is gepland in \Routines\Matrixbewerkingen)
+
+# Hier bepalen we per zone de nieuwe doelwaarden voor rijen en kolommen. 
+# Dit mag worden opgegeven per zone, per rij of kolom
+rowTargets = {1 => 5000, 25 => 200} # Producties opgeven per zone (hier krijgt zone 1 5000 ritten en zone 25 200 ritten)
+colTargets = {25 => 100}            # Attracties opgeven per zone (hier krijgt zone 25 100 aankomsten)  
+zoneData = {:rows => rowTargets, :cols => colTargets}
+
+
+# Vul hieronder de juiste source_cube en destination_cube in!
+
+fratarTest = UseFratarDistribution.new     # Doe een aanroep naar de FratarModule
+fratarTest.help                            # Laat de Hulp file zien (optioneel)
+fratarTest.source_cube = '2020_KAL' #'2040_StedRef_REM_SMC'        # Geef een MatrixCube op (hier: 2016_SMC)        
+fratarTest.matrix = [1,2,1,103]            # Geef een Matrix op (ENKELE MATRIX PER AANROEP!) (Hier Auto OS)
+fratarTest.targetZoneData = zoneData       # targetZoneData naar de bovengenoemde zonetotalen
+fratarTest.destination_cube = 'FratarDemo' # Resultaatcube waar het resultaat van de bewerking wordt weggeschreven
+fratarTest.execute
+```
+:::
+
+### .log File
+
+::: {.content-visible when-format="html"}
+
+```txt
+04-30-2025 14:49:50
+
+Executable: C:\Users\Downloads\Srirama\Srirama_CARMOD\CARMOD.exe; 04-30-2025 11:25:34; 2012160 bytes
+
+Running on computer: LME5CD349GDM2
+
+Reading settings from: carmod.ctl; 04-30-2025 14:49:38; 404 bytes
+
+Cars per hh for 3+ alternative: 4.092
+
+           Iter     No Car Hhs      1 Car HHs     2 Cars HHs     3 Cars Hhs     Total Cars
+
+        Target:        2065325        5054103        1859479         356451       10231504
+
+              1        2201659        4941227        1877052         322982       10016831
+              2        2116130        5038802        1839383         348604       10143905
+              3        2087124        5052505        1850115         353176       10197778
+              4        2075485        5056096        1856200         355139       10221569
+              5        2070613        5057351        1858918         356037       10231937
+              6        2068543        5057844        1860097         356435       10236416
+              7        2067660        5058047        1860604         356609       10238342
+              8        2067282        5058133        1860821         356683       10239170
+              9        2067120        5058169        1860915         356716       10239525
+             10        2067050        5058185        1860955         356729       10239677
+             11        2067020        5058192        1860972         356735       10239742
+             12        2067007        5058195        1860980         356738       10239770
+             13        2067002        5058196        1860983         356739       10239782
+             14        2067000        5058196        1860984         356739       10239787
+             15        2066999        5058197        1860985         356740       10239790
+             16        2066998        5058197        1860985         356740       10239791
+             17        2066998        5058197        1860985         356740       10239791
+             18        2066998        5058197        1860985         356740       10239791
+             19        2066998        5058197        1860985         356740       10239791
+             20        2066998        5058197        1860985         356740       10239791
+             21        2066998        5058197        1860985         356740       10239791
+             22        2066998        5058197        1860985         356740       10239791
+             23        2066998        5058197        1860985         356740       10239791
+             24        2066998        5058197        1860985         356740       10239791
+             25        2066998        5058197        1860985         356740       10239791
+             26        2066998        5058197        1860985         356740       10239791
+             27        2066998        5058197        1860985         356740       10239791
+             28        2066998        5058197        1860985         356740       10239791
+             29        2066998        5058197        1860985         356740       10239791
+             30        2066998        5058197        1860985         356740       10239791
+
+     Difference                          4094           1506            289           8287
+   % Difference                         0.081          0.081          0.081          0.081
+
+Input files:
+
+CARCOEF: C:\Users\Downloads\Srirama\Srirama_CARMOD\Input\carmod.coef; 04-30-2025 11:25:34; 1521 bytes
+ZONEDAT: C:\Users\Downloads\Srirama\Srirama_CARMOD\Input\_SEG_VMRDHv4_2040H_5.csv; 04-30-2025 11:25:34; 1802572 bytes
+ZONCONST: C:\Users\Downloads\Srirama\Srirama_CARMOD\Input\carmod.sum; 04-30-2025 11:25:34; 887718 bytes
+HSAMP: C:\Users\Downloads\Srirama\Srirama_CARMOD\Input\hsamp.dat; 04-30-2025 11:25:34; 5346288 bytes
+POPU: C:\Users\Downloads\Srirama\Srirama_CARMOD\Input\popu.bin; 04-30-2025 11:25:34; 23544864 bytes
+
+Output files:
+
+SUMMARY: C:\Users\Downloads\Srirama\Srirama_CARMOD\carmod_30.sum; 04-30-2025 15:23:34; 887718 bytes
+TWEAK: C:\Users\Downloads\Srirama\Srirama_CARMOD\carmod_30.coef; 04-30-2025 15:23:34; 1521 bytes
+
+04-30-2025 15:23:33
+
+Run time: 0 hour 33 min 43 sec
+
+```
+:::
+
+
+::::
+:::::
+
+## QUAD
+
+:::: nav-pills
+::: panel-tabset
+### Purpose
+
+Some text explaining what the code does.
+
+### Inputs
+
+Following are the inputs to this job.
+
+### Outputs
+
+Following are the outputs to this job.
+
+### Code
+
+Download the code.[matrixcompress.rb](../first.rb)
+:::
+::::
+
+## IntraLOS
+
+:::: nav-pills
+::: panel-tabset
+### Purpose
+
+Some text explaining what the code does.
+
+### Inputs
+
+Following are the inputs to this job.
+
+### Outputs
+
+Following are the outputs to this job.
+
+### Code
+
+Download the code.[matrixcompress.rb](../first.rb)
+:::
+::::

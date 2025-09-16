@@ -1,0 +1,9 @@
+## VMRDH 3.0 {.unnumbered}
+
+::: {.content-visible when-format="html"}
+This website acts as a manual to understand the OmniTrans jobs, their purpose, inputs and outputs. It also allows you to download the jobs and input templates.
+:::
+
+::: {.content-visible when-format="pdf"}
+This pdf acts as a manual to understand the OmniTrans jobs, their purpose, inputs and outputs.It also allows you to download the jobs and input templates.
+:::
