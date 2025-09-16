@@ -54,14 +54,47 @@
     ]
   },
   {
-    "objectID": "Standard_uitvoer/07_SelectedLinkCompress/intro.html",
-    "href": "Standard_uitvoer/07_SelectedLinkCompress/intro.html",
-    "title": "5  Selected Link Compress",
+    "objectID": "Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.html",
+    "href": "Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.html",
+    "title": "5  (Multiple) Selected Link Compress",
     "section": "",
-    "text": "PurposeInputsOutputsCode\n\n\nSome text explaining what the code does.\n\n\nFollowing are the inputs to this job.\n\n\nFollowing are the outputs to this job.\n\n\nDownload the code.matrixcompress.rb",
+    "text": "5.1 Purpose\nThis job has the advantage of doing multiple selected link compressions in one run. You can specify the links and directions you want to analyze in the code. The job will then loop through each specified link and direction, performing the selected link compression and generating the corresponding reports. Two forms are supported:\nThis job calculates selected link compressions for specified links and generates reports in Excel. You can use this job to calculate selected link assignments for auto, vracht, OV and bicycles.You can use this job to calculate selected link assignments without generating reports in Excel.\nThe following image is a schematic and shows an example of the output and the matrix numbers. The output takes each possible combinations of time and LinkID.",
     "crumbs": [
       "Standard Uitvoer",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Selected Link Compress</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>(Multiple) Selected Link Compress</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.html#inputs",
+    "href": "Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.html#inputs",
+    "title": "5  (Multiple) Selected Link Compress",
+    "section": "5.2 Inputs",
+    "text": "5.2 Inputs\n\nvracht: Set to true of false to indicate if vracht should be included in the assignment.\nauto: Set to true of false to indicate if auto should be included in the assignment.\nov: Set to true of false to indicate if OV should be included in the assignment.\nfiets: Set to true of false to indicate if bicycles should be included in the assignment.\ndagdelen: Array with the time periods to be included in the assignment. Possible values are T_Os, T_Rd, T_As. - totaal_toedeling_bestaat: Set to true if the total assignment already exists in the OT database. This can save time if you have already run a full assignment and only want to do selected link assignments. threads: Number of threads to be used for the assignment. This can speed up the assignment process.\nlinknrs: Array of arrays with the link numbers and directions to be analyzed. Each inner array should contain the link number and direction (1 for outbound, 2 for inbound, 3 for both).\n\n# Variabelen: \n#====================================================================================================================\n$vracht = true\n$auto = true\n$ov = false\n$fiets = false\n$dagdelen = [T_Rd] # [T_Os,T_Rd,T_As]\n$totaal_toedeling_bestaat = false\n$threads = 11\n# linknummers opgeven en daarna de richting [3 = beide, 1 = heen 2 = terug] \nlinknrs = [[16144,1],[16143,2]]",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>(Multiple) Selected Link Compress</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.html#outputs",
+    "href": "Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.html#outputs",
+    "title": "5  (Multiple) Selected Link Compress",
+    "section": "5.3 Outputs",
+    "text": "5.3 Outputs\nThe outputs of this job are the selected link matrices stored in the OT database. If you choose to export to Excel, the output will also include Excel files with the selected link assignment results. You can also export to other formats if from the GUI when you open the matrix.\nHere is the output of an example run",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>(Multiple) Selected Link Compress</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.html#code",
+    "href": "Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.html#code",
+    "title": "5  (Multiple) Selected Link Compress",
+    "section": "5.4 Code",
+    "text": "5.4 Code\n\n5.4.1 Without compression or export to Excel\n\n\n# Variabelen: \n#====================================================================================================================\n$vracht = true\n$auto = true\n$ov = false\n$fiets = false\n$dagdelen = [T_Rd] # [T_Os,T_Rd,T_As]\n$totaal_toedeling_bestaat = false\n$threads = 11\n# linknummers opgeven en daarna de richting [3 = beide, 1 = heen 2 = terug] \nlinknrs = [[16144,1],[16143,2]] \nfor x in 0..linknrs.length-1                # hier niks doen, loop\n  $link = linknrs[x]                        # hier niks doen, loop\n  $result = 421+x                           # uniek getal opgeven die nog niet binnen deze variant gebruikt wordt(alleen getal aanpassen)\n  #$result = 400\n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\01a Toedelen MVT (sellink).rb' if $auto && $vracht\n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\01b Toedelen OV (sellink).rb' if $ov\n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\01c Toedelen Fiets (sellink).rb' if $fiets\n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\02 Aanmaken OD-matrices.rb'\n\nend\n\n\n5.4.2 With compression or export to Excel\nThe only difference is the last line in the job. The difference with the previous code is that after creating the OD matrices, a compression to 65x65 matrices or MRDH municipalities or another is done and exported to Excel.\n\n\n\n# Variabelen: \n#====================================================================================================================\n$vracht = true\n$auto = true\n$ov = false\n$fiets = false\n$dagdelen = [T_Rd] # [T_Os,T_Rd,T_As]\n$totaal_toedeling_bestaat = false\n$threads = 11\n# linknummers opgeven en daarna de richting [3 = beide, 1 = heen 2 = terug] \nlinknrs = [[16144,1],[16143,2]]  \nfor x in 0..linknrs.length-1                # hier niks doen, loop\n  $link = linknrs[x]                        # hier niks doen, loop\n  $result = 421+x   # uniek getal opgeven die nog niet binnen deze variant gebruikt wordt(alleen getal aanpassen)\n  \n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\01a Toedelen MVT (sellink).rb' if $auto && $vracht\n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\01b Toedelen OV (sellink).rb' if $ov\n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\01c Toedelen Fiets (sellink).rb' if $fiets\n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\02 Aanmaken OD-matrices.rb'\n  \n  load $Ot.dirJob+'Standaard uitvoer\\Routines\\SelectedLinkCompress\\03 matrixcompress sellink (MRDH groot).rb'\nend",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>(Multiple) Selected Link Compress</span>"
     ]
   },
   {
