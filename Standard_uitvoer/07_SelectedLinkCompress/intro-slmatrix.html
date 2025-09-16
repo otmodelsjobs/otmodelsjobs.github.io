@@ -333,7 +333,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>auto</code>: Set to true of false to indicate if auto should be included in the assignment.</li>
 <li><code>ov</code>: Set to true of false to indicate if OV should be included in the assignment.</li>
 <li><code>fiets</code>: Set to true of false to indicate if bicycles should be included in the assignment.</li>
-<li><code>dagdelen</code>: Array with the time periods to be included in the assignment. Possible values are T_Os, T_Rd, T_As. - <code>totaal_toedeling_bestaat</code>: Set to true if the total assignment already exists in the OT database. This can save time if you have already run a full assignment and only want to do selected link assignments. <code>threads</code>: Number of threads to be used for the assignment. This can speed up the assignment process.</li>
+<li><code>dagdelen</code>: Array with the time periods to be included in the assignment. Possible values are T_Os, T_Rd, T_As.</li>
+<li><code>totaal_toedeling_bestaat</code>: Set to true if the total assignment already exists in the OT database. This can save time if you have already run a full assignment and only want to do selected link assignments.</li>
+<li><code>threads</code>: Number of threads to be used for the assignment. This can speed up the assignment process.</li>
 <li><code>linknrs</code>: Array of arrays with the link numbers and directions to be analyzed. Each inner array should contain the link number and direction (1 for outbound, 2 for inbound, 3 for both).</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource ruby number-lines code-with-copy"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Variabelen: </span></span>
