@@ -19,7 +19,9 @@ The following image is a schematic and shows an example of the output and the ma
 - `auto`: Set to true of false to indicate if auto should be included in the assignment. 
 - `ov`: Set to true of false to indicate if OV should be included in the assignment. 
 - `fiets`: Set to true of false to indicate if bicycles should be included in the assignment. 
-- `dagdelen`: Array with the time periods to be included in the assignment. Possible values are T_Os, T_Rd, T_As. - `totaal_toedeling_bestaat`: Set to true if the total assignment already exists in the OT database. This can save time if you have already run a full assignment and only want to do selected link assignments. `threads`: Number of threads to be used for the assignment. This can speed up the assignment process. 
+- `dagdelen`: Array with the time periods to be included in the assignment. Possible values are T_Os, T_Rd, T_As.
+- `totaal_toedeling_bestaat`: Set to true if the total assignment already exists in the OT database. This can save time if you have already run a full assignment and only want to do selected link assignments. 
+- `threads`: Number of threads to be used for the assignment. This can speed up the assignment process. 
 - `linknrs`: Array of arrays with the link numbers and directions to be analyzed. Each inner array should contain the link number and direction (1 for outbound, 2 for inbound, 3 for both).
 
 ``` ruby
