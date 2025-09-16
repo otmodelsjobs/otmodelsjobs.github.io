@@ -30,7 +30,7 @@ book:
        # - Standard_uitvoer/04_Thermopunten/intro.qmd
         - Standard_uitvoer/05_(Skim)Matrix_Exports/intro.qmd
         - Standard_uitvoer/06_Bereikbaarheid/intro.qmd
-        - Standard_uitvoer/07_SelectedLinkCompress/intro.qmd
+        - Standard_uitvoer/07_SelectedLinkCompress/intro-slmatrix.qmd
         - Standard_uitvoer/08_INEXDO/intro.qmd
         - Standard_uitvoer/09_Uitsnednetwerken(TNO)/intro.qmd
         - Standard_uitvoer/11_Milieu(Goudappel)/intro.qmd
