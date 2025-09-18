@@ -48,6 +48,8 @@ Here is the output of an example run
 
 ## Code
 
+[/07_SelectedLinkCompress/SelectedLinkCompress.rb ]{.aside}
+
 ### Without compression or export to Excel
 
 ``` ruby

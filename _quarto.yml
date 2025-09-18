@@ -6,15 +6,16 @@ project:
 book:
   title: "VMRDH-Jobs"
   author: 
-    name: "Document-ID: {{< env git_hash >}}"
-    email: sk.bhamidipati@rotterdam.nl
-    affiliations:
-      - name: Gemeente Rotterdam
-        address: Wilhelminakade 179 · 3072 AP 
-        city: Rotterdam
+    - name: Srirama Bhamidipati
+      email: sk.bhamidipati#rotterdam.nl
+      affiliations: Gemeente Rotterdam
+      address: Wilhelminakade 179 · 3072 AP 
+      city: Rotterdam
+    - name: "Document-ID: {{< env git_hash >}}"
+      email: sk.bhamidipati@rotterdam.nl
+      
         
   date: "now"
-  # date-format: YYYY-MM-DDTHH:mm:ssZ
   navbar:
     background: primary
     search: true
@@ -58,7 +59,7 @@ format:
     css: style.css
     toc: true
     toc-title: Job index
-    code-overflow: scroll
+    code-overflow: wrap
     code-line-numbers: true
     
   pdf:
@@ -66,6 +67,8 @@ format:
     keep-tex: true
     toccolor: blue
     toc-title: Job index
+    reference-location: margin
+    citation-location: margin
     
     
 execute:

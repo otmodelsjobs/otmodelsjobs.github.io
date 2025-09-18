@@ -1,7 +1,6 @@
 # Matrix Compressies
 
-:::::: nav-pills
-::::: panel-tabset
+
 ## Purpose
 
 There are 4 types of matrix compression jobs. Each job has a different spatial aggregation level. The four aggregation levels are :
@@ -32,7 +31,7 @@ You also have to control the output format. The output can be in two formats: ex
 
 Download the code.[matrixcompress.rb](../first.rb)
 
-::: {.content-hidden when-format="pdf"}
+::: {.content-hidden }
 ``` ruby
 # Variabelen: 
 #====================================================================================================================
@@ -178,6 +177,4 @@ WriteMatrixToExcel(gecomprimeerdeMatrices, $matrices, $naam)
 
 writeln "Gereed!"
 ```
-:::
-:::::
-::::::
+

@@ -1,21 +1,17 @@
 # INEXDO
 
-
-
-::: {.nav-pills}
-::: {.panel-tabset}
-
 ## Purpose
 
 INEXDO is voor al het inkomend, uitgaand en doorgaand verkeer door een of meerdere zones.
+
+![](images/clipboard-860347339.png)
 
 
 
 ## Inputs
 
- - `Zone number(s)` : the zones you want to use
- - `Matrix location`
-
+-   `Zone number(s)` : the zones you want to use
+-   `Matrix location`
 
 ## Outputs
 
@@ -23,15 +19,6 @@ Following are the outputs to this job.
 
 ## Code
 
-```ruby
+``` ruby
 Zone = [1,2,3,4]+[5,6,7,8]
-
-
 ```
-
-
-
-
-
-:::
-:::
