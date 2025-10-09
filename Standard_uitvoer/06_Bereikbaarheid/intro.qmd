@@ -1,16 +1,10 @@
 # Bereikbaarheid
 
-
-
-
-::: {.nav-pills}
-::: {.panel-tabset}
-
+:::: nav-pills
+::: panel-tabset
 ## Purpose
 
-Some text explaining what the code does. And how
-
-
+![](images/accessChatGPT.png){fig-align="center" width="471"}
 
 ## Inputs
 
@@ -23,8 +17,5 @@ Following are the outputs to this job.
 ## Code
 
 Download the code.[matrixcompress.rb](../first.rb)
-
-
-
 :::
-:::
+::::

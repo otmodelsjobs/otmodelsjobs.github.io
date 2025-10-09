@@ -5,6 +5,8 @@ This job has the advantage of doing multiple selected link compressions in one r
 -   Only store resulting select link matrices in OT database without exporting to Excel.
 -   Export to Excel after compression to 65x65 matrices or MRDH municipalities or another.
 
+![](images/discussSLA.png){fig-align="center" width="300"}
+
 ## Purpose
 
 This job calculates selected link compressions for specified links and generates reports in Excel. You can use this job to calculate selected link assignments for auto, vracht, OV and bicycles.You can use this job to calculate selected link assignments without generating reports in Excel.
@@ -15,14 +17,14 @@ The following image is a schematic and shows an example of the output and the ma
 
 ## Inputs
 
-- `vracht`: Set to true of false to indicate if vracht should be included in the assignment. 
-- `auto`: Set to true of false to indicate if auto should be included in the assignment. 
-- `ov`: Set to true of false to indicate if OV should be included in the assignment. 
-- `fiets`: Set to true of false to indicate if bicycles should be included in the assignment. 
-- `dagdelen`: Array with the time periods to be included in the assignment. Possible values are T_Os, T_Rd, T_As.
-- `totaal_toedeling_bestaat`: Set to true if the total assignment already exists in the OT database. This can save time if you have already run a full assignment and only want to do selected link assignments. 
-- `threads`: Number of threads to be used for the assignment. This can speed up the assignment process. 
-- `linknrs`: Array of arrays with the link numbers and directions to be analyzed. Each inner array should contain the link number and direction (1 for outbound, 2 for inbound, 3 for both).
+-   `vracht`: Set to true of false to indicate if vracht should be included in the assignment.
+-   `auto`: Set to true of false to indicate if auto should be included in the assignment.
+-   `ov`: Set to true of false to indicate if OV should be included in the assignment.
+-   `fiets`: Set to true of false to indicate if bicycles should be included in the assignment.
+-   `dagdelen`: Array with the time periods to be included in the assignment. Possible values are T_Os, T_Rd, T_As.
+-   `totaal_toedeling_bestaat`: Set to true if the total assignment already exists in the OT database. This can save time if you have already run a full assignment and only want to do selected link assignments.
+-   `threads`: Number of threads to be used for the assignment. This can speed up the assignment process.
+-   `linknrs`: Array of arrays with the link numbers and directions to be analyzed. Each inner array should contain the link number and direction (1 for outbound, 2 for inbound, 3 for both).
 
 ``` ruby
 # Variabelen: 

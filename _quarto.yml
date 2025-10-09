@@ -6,10 +6,10 @@ project:
 book:
   title: "VMRDH-Jobs"
   author: 
-    name: "Document-ID: {{< env git_hash >}}"
+    name: Srirama Bhamidipati
     email: sk.bhamidipati@rotterdam.nl
     affiliations:
-      - name: Gemeente Rotterdam
+      - name: "Document-ID: {{< env git_hash >}}"
         address: Wilhelminakade 179 · 3072 AP 
         city: Rotterdam
         

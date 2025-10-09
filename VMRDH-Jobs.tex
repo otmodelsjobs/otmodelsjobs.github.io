@@ -132,6 +132,12 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+\fi
 
 
 
@@ -212,7 +218,7 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={VMRDH-Jobs},
-  pdfauthor={Document-ID: ?env:git\_hash},
+  pdfauthor={Srirama Bhamidipati},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -222,8 +228,8 @@
 
 
 \title{VMRDH-Jobs}
-\author{Document-ID: \textbf{?env:git\_hash}}
-\date{2025-05-19}
+\author{Srirama Bhamidipati}
+\date{2025-10-09}
 \begin{document}
 \maketitle
 
@@ -249,7 +255,7 @@ input templates.
 
 \chapter{Matrix Compressies}\label{matrix-compressies}
 
-\section{Purpose}
+\section{Purpose}\label{purpose}
 
 There are 4 types of matrix compression jobs. Each job has a different
 spatial aggregation level. The four aggregation levels are :
@@ -268,10 +274,7 @@ spatial aggregation level. The four aggregation levels are :
 
 \pandocbounded{\includegraphics[keepaspectratio]{images/compression.png}}
 
-\begin{verbatim}
-\end{verbatim}
-
-\section{Inputs}
+\section{Inputs}\label{inputs}
 
 The inputs for the job are matrices listed under \texttt{\$matrices}.
 Different jobs handle the different level of aggregation for you, so you
@@ -280,7 +283,11 @@ to change output formats). The input \texttt{\$matrices}takes a list,
 each item in the list takes the form
 \texttt{{[}"Output\_Sheet\_name",\ {[}P,M,T,U{]}{]},}.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, coltitle=black, colframe=quarto-callout-important-color-frame, toprule=.15mm, titlerule=0mm, breakable, bottomrule=.15mm, arc=.35mm, colback=white, left=2mm]
+\begin{center}
+\includegraphics[width=4.19792in,height=\textheight,keepaspectratio]{Standard_uitvoer/02_MatrixCompressies/images/matcompress.png}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, opacitybacktitle=0.6, coltitle=black, opacityback=0, colback=white, colframe=quarto-callout-important-color-frame, rightrule=.15mm, bottomtitle=1mm, breakable, bottomrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, titlerule=0mm, leftrule=.75mm, left=2mm]
 
 Each spatial level is a different job. If you have changed only the list
 of matrices in the job, you can use it without caution. But if you have
@@ -291,7 +298,7 @@ careful that each \emph{Centroid Number} is exclusively in ONLY ONE
 
 \end{tcolorbox}
 
-\section{Outputs}
+\section{Outputs}\label{outputs}
 
 You also have to control the output format. The output can be in two
 formats: excel or openoffice. If you are working on the MRDH servers,
@@ -300,13 +307,13 @@ lines below it. If you want to get an excel format output, you would
 comment the \texttt{Naar\ Open\ Office} and the the two lines below it
 and uncomment \texttt{Naar\ Excel} and the two lines below it.
 
-\section{Code}
+\section{Code}\label{code}
 
 Download the code.\href{../first.rb}{matrixcompress.rb}
 
 \chapter{Voertuigprestaties}\label{voertuigprestaties}
 
-\section{Purpose}
+\section{Purpose}\label{purpose-1}
 
 The voertuigprestaties ( or vehicle-km, vehicle-hours) is a performance
 indicator for the whole network (or selected-part of a network). This
@@ -316,9 +323,13 @@ vehicles collectively in the network. More time spent by vehicles in the
 network could indicate congestion. Similarly more vehicle-km driven by
 vehicles indicate higher pollution/ fuel-usage levels for example.
 
-\section{Inputs}
+\begin{center}
+\includegraphics[width=4.51042in,height=\textheight,keepaspectratio]{Standard_uitvoer/03_Voertuigprestaties/images/vehicle_kilometers(Klein).png}
+\end{center}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, coltitle=black, colframe=quarto-callout-important-color-frame, toprule=.15mm, titlerule=0mm, breakable, bottomrule=.15mm, arc=.35mm, colback=white, left=2mm]
+\section{Inputs}\label{inputs-1}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, opacitybacktitle=0.6, coltitle=black, opacityback=0, colback=white, colframe=quarto-callout-important-color-frame, rightrule=.15mm, bottomtitle=1mm, breakable, bottomrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, titlerule=0mm, leftrule=.75mm, left=2mm]
 
 Be careful! Each line of this job is an input parameter. Read carefully
 and select the pmturi numbers very carefully.
@@ -390,7 +401,7 @@ and select the pmturi numbers very carefully.
 \end{Highlighting}
 \end{Shaded}
 
-\section{Outputs}
+\section{Outputs}\label{outputs-1}
 
 You also have to control the output format. The output can be in two
 formats: excel or openoffice. If you are working on the MRDH servers,
@@ -398,7 +409,7 @@ you must open/ uncomment the \texttt{\#\#\ extra\ opties\ voor\ excel}
 and the the lines below it. On MRDH severs, you can set
 \texttt{vtgkm.openoffice\ =\ true}
 
-\section{Code}
+\section{Code}\label{code-1}
 
 Download the code.\href{../first.rb}{matrixcompress.rb}
 
@@ -424,7 +435,9 @@ Download the code.\href{../first.rb}{matrixcompress.rb}
 
 \section{Purpose}
 
-Some text explaining what the code does. And how
+\begin{center}
+\includegraphics[width=4.90625in,height=\textheight,keepaspectratio]{Standard_uitvoer/06_Bereikbaarheid/images/accessChatGPT.png}
+\end{center}
 
 \section{Inputs}
 
@@ -438,32 +451,213 @@ Following are the outputs to this job.
 
 Download the code.\href{../first.rb}{matrixcompress.rb}
 
-\chapter{Selected Link Compress}\label{selected-link-compress}
+\chapter{(Multiple) Selected Link
+Compress}\label{multiple-selected-link-compress}
 
-\section{Purpose}
+This job has the advantage of doing multiple selected link compressions
+in one run. You can specify the links and directions you want to analyze
+in the code. The job will then loop through each specified link and
+direction, performing the selected link compression and generating the
+corresponding reports. Two forms are supported:
 
-Some text explaining what the code does.
+\begin{itemize}
+\tightlist
+\item
+  Only store resulting select link matrices in OT database without
+  exporting to Excel.
+\item
+  Export to Excel after compression to 65x65 matrices or MRDH
+  municipalities or another.
+\end{itemize}
 
-\section{Inputs}
+\begin{center}
+\includegraphics[width=3.125in,height=\textheight,keepaspectratio]{Standard_uitvoer/07_SelectedLinkCompress/images/discussSLA.png}
+\end{center}
 
-Following are the inputs to this job.
+\section{Purpose}\label{purpose-4}
 
-\section{Outputs}
+This job calculates selected link compressions for specified links and
+generates reports in Excel. You can use this job to calculate selected
+link assignments for auto, vracht, OV and bicycles.You can use this job
+to calculate selected link assignments without generating reports in
+Excel.
 
-Following are the outputs to this job.
+The following image is a schematic and shows an example of the output
+and the matrix numbers. The output takes each possible combinations of
+time and LinkID.
 
-\section{Code}
+\pandocbounded{\includegraphics[keepaspectratio]{Standard_uitvoer/07_SelectedLinkCompress/images/clipboard-1043501582.png}}
 
-Download the code.\href{../first.rb}{matrixcompress.rb}
+\section{Inputs}\label{inputs-4}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{vracht}: Set to true of false to indicate if vracht should be
+  included in the assignment.
+\item
+  \texttt{auto}: Set to true of false to indicate if auto should be
+  included in the assignment.
+\item
+  \texttt{ov}: Set to true of false to indicate if OV should be included
+  in the assignment.
+\item
+  \texttt{fiets}: Set to true of false to indicate if bicycles should be
+  included in the assignment.
+\item
+  \texttt{dagdelen}: Array with the time periods to be included in the
+  assignment. Possible values are T\_Os, T\_Rd, T\_As.
+\item
+  \texttt{totaal\_toedeling\_bestaat}: Set to true if the total
+  assignment already exists in the OT database. This can save time if
+  you have already run a full assignment and only want to do selected
+  link assignments.
+\item
+  \texttt{threads}: Number of threads to be used for the assignment.
+  This can speed up the assignment process.
+\item
+  \texttt{linknrs}: Array of arrays with the link numbers and directions
+  to be analyzed. Each inner array should contain the link number and
+  direction (1 for outbound, 2 for inbound, 3 for both).
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Variabelen: }
+\CommentTok{\#====================================================================================================================}
+\VariableTok{$vracht} \OperatorTok{=} \DecValTok{true}
+\VariableTok{$auto} \OperatorTok{=} \DecValTok{true}
+\VariableTok{$ov} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$fiets} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$dagdelen} \OperatorTok{=} \KeywordTok{[}\DataTypeTok{T\_Rd}\KeywordTok{]} \CommentTok{\# [T\_Os,T\_Rd,T\_As]}
+\VariableTok{$totaal\_toedeling\_bestaat} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$threads} \OperatorTok{=} \DecValTok{11}
+\CommentTok{\# linknummers opgeven en daarna de richting [3 = beide, 1 = heen 2 = terug] }
+\NormalTok{linknrs }\OperatorTok{=} \KeywordTok{[[}\DecValTok{16144}\NormalTok{,}\DecValTok{1}\KeywordTok{]}\NormalTok{,}\KeywordTok{[}\DecValTok{16143}\NormalTok{,}\DecValTok{2}\KeywordTok{]]} 
+\end{Highlighting}
+\end{Shaded}
+
+\section{Outputs}\label{outputs-4}
+
+The outputs of this job are the selected link matrices stored in the OT
+database. If you choose to export to Excel, the output will also include
+Excel files with the selected link assignment results. You can also
+export to other formats if from the GUI when you open the matrix.
+
+Here is the output of an example run
+
+\pandocbounded{\includegraphics[keepaspectratio]{Standard_uitvoer/07_SelectedLinkCompress/images/clipboard-2503057459.png}}
+
+\section{Code}\label{code-4}
+
+\subsection{Without compression or export to
+Excel}\label{without-compression-or-export-to-excel}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+
+\CommentTok{\# Variabelen: }
+\CommentTok{\#====================================================================================================================}
+\VariableTok{$vracht} \OperatorTok{=} \DecValTok{true}
+\VariableTok{$auto} \OperatorTok{=} \DecValTok{true}
+\VariableTok{$ov} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$fiets} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$dagdelen} \OperatorTok{=} \KeywordTok{[}\DataTypeTok{T\_Rd}\KeywordTok{]} \CommentTok{\# [T\_Os,T\_Rd,T\_As]}
+\VariableTok{$totaal\_toedeling\_bestaat} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$threads} \OperatorTok{=} \DecValTok{11}
+\CommentTok{\# linknummers opgeven en daarna de richting [3 = beide, 1 = heen 2 = terug] }
+\NormalTok{linknrs }\OperatorTok{=} \KeywordTok{[[}\DecValTok{16144}\NormalTok{,}\DecValTok{1}\KeywordTok{]}\NormalTok{,}\KeywordTok{[}\DecValTok{16143}\NormalTok{,}\DecValTok{2}\KeywordTok{]]} 
+\ControlFlowTok{for}\NormalTok{ x }\ControlFlowTok{in} \DecValTok{0}\OperatorTok{..}\NormalTok{linknrs}\AttributeTok{.length}\OperatorTok{{-}}\DecValTok{1}                \CommentTok{\# hier niks doen, loop}
+  \VariableTok{$link} \OperatorTok{=}\NormalTok{ linknrs}\KeywordTok{[}\NormalTok{x}\KeywordTok{]}                        \CommentTok{\# hier niks doen, loop}
+  \VariableTok{$result} \OperatorTok{=} \DecValTok{421}\OperatorTok{+}\NormalTok{x                           }\CommentTok{\# uniek getal opgeven die nog niet binnen deze variant gebruikt wordt(alleen getal aanpassen)}
+  \CommentTok{\#$result = 400}
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}01a Toedelen MVT (sellink).rb\textquotesingle{}} \ControlFlowTok{if} \VariableTok{$auto} \OperatorTok{\&\&} \VariableTok{$vracht}
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}01b Toedelen OV (sellink).rb\textquotesingle{}} \ControlFlowTok{if} \VariableTok{$ov}
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}01c Toedelen Fiets (sellink).rb\textquotesingle{}} \ControlFlowTok{if} \VariableTok{$fiets}
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}02 Aanmaken OD{-}matrices.rb\textquotesingle{}}
+
+\ControlFlowTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{With compression or export to
+Excel}\label{with-compression-or-export-to-excel}
+
+The only difference is the last line in the job. The difference with the
+previous code is that after creating the OD matrices, a compression to
+65x65 matrices or MRDH municipalities or another is done and exported to
+Excel.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+
+
+\CommentTok{\# Variabelen: }
+\CommentTok{\#====================================================================================================================}
+\VariableTok{$vracht} \OperatorTok{=} \DecValTok{true}
+\VariableTok{$auto} \OperatorTok{=} \DecValTok{true}
+\VariableTok{$ov} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$fiets} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$dagdelen} \OperatorTok{=} \KeywordTok{[}\DataTypeTok{T\_Rd}\KeywordTok{]} \CommentTok{\# [T\_Os,T\_Rd,T\_As]}
+\VariableTok{$totaal\_toedeling\_bestaat} \OperatorTok{=} \DecValTok{false}
+\VariableTok{$threads} \OperatorTok{=} \DecValTok{11}
+\CommentTok{\# linknummers opgeven en daarna de richting [3 = beide, 1 = heen 2 = terug] }
+\NormalTok{linknrs }\OperatorTok{=} \KeywordTok{[[}\DecValTok{16144}\NormalTok{,}\DecValTok{1}\KeywordTok{]}\NormalTok{,}\KeywordTok{[}\DecValTok{16143}\NormalTok{,}\DecValTok{2}\KeywordTok{]]}  
+\ControlFlowTok{for}\NormalTok{ x }\ControlFlowTok{in} \DecValTok{0}\OperatorTok{..}\NormalTok{linknrs}\AttributeTok{.length}\OperatorTok{{-}}\DecValTok{1}                \CommentTok{\# hier niks doen, loop}
+  \VariableTok{$link} \OperatorTok{=}\NormalTok{ linknrs}\KeywordTok{[}\NormalTok{x}\KeywordTok{]}                        \CommentTok{\# hier niks doen, loop}
+  \VariableTok{$result} \OperatorTok{=} \DecValTok{421}\OperatorTok{+}\NormalTok{x   }\CommentTok{\# uniek getal opgeven die nog niet binnen deze variant gebruikt wordt(alleen getal aanpassen)}
+  
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}01a Toedelen MVT (sellink).rb\textquotesingle{}} \ControlFlowTok{if} \VariableTok{$auto} \OperatorTok{\&\&} \VariableTok{$vracht}
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}01b Toedelen OV (sellink).rb\textquotesingle{}} \ControlFlowTok{if} \VariableTok{$ov}
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}01c Toedelen Fiets (sellink).rb\textquotesingle{}} \ControlFlowTok{if} \VariableTok{$fiets}
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}02 Aanmaken OD{-}matrices.rb\textquotesingle{}}
+  
+  \FunctionTok{load} \VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\VerbatimStringTok{\textquotesingle{}Standaard uitvoer\textbackslash{}Routines\textbackslash{}SelectedLinkCompress\textbackslash{}03 matrixcompress sellink (MRDH groot).rb\textquotesingle{}}
+\ControlFlowTok{end}
+\end{Highlighting}
+\end{Shaded}
 
 \chapter{INEXDO}\label{inexdo}
 
-\section{Purpose}
+Sub area analysis of transport modeling is a method used to evaluate and
+understand the travel patterns and behaviors within a specific
+geographic area or zone. This type of analysis is crucial for urban
+planners, transportation engineers, and policymakers to make informed
+decisions about infrastructure development, traffic management, and
+public transportation services. A select-area analysis or a sub-area
+analysis typically involves the following steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Data Collection}: Gather data on travel patterns, including
+  origin-destination matrices, traffic counts, public transportation
+  usage, and demographic information.
+\item
+  Cut a small portion of the model area, a sub-area, for detailed
+  analysis. This can be done by selecting specific zones or regions
+  within the larger model.
+\item
+  \textbf{Analysis}: Analyze the results of the model to identify key
+  travel patterns, congestion points, and areas of high demand for
+  transportation services. This involves internal-internal,
+  internal-external and external-external trips.
+\end{enumerate}
+
+\begin{center}
+\includegraphics[width=4.16667in,height=\textheight,keepaspectratio]{Standard_uitvoer/08_INEXDO/images/inexdo-01.png}
+\end{center}
+
+\section{Purpose}\label{purpose-5}
 
 INEXDO is voor al het inkomend, uitgaand en doorgaand verkeer door een
 of meerdere zones.
 
-\section{Inputs}
+\pandocbounded{\includegraphics[keepaspectratio]{Standard_uitvoer/08_INEXDO/images/clipboard-3825943022.png}}
+
+\section{Inputs}\label{inputs-5}
 
 \begin{itemize}
 \tightlist
@@ -473,16 +667,15 @@ of meerdere zones.
   \texttt{Matrix\ location}
 \end{itemize}
 
-\section{Outputs}
+\section{Outputs}\label{outputs-5}
 
 Following are the outputs to this job.
 
-\section{Code}
+\section{Code}\label{code-5}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \DataTypeTok{Zone} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\KeywordTok{]}\OperatorTok{+}\KeywordTok{[}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{7}\NormalTok{,}\DecValTok{8}\KeywordTok{]}
-
 \end{Highlighting}
 \end{Shaded}
 
@@ -490,13 +683,19 @@ Following are the outputs to this job.
 
 This job allows you to cut a cordon from the larger network and create
 an OD matrix for this cordon. This is also known as
-\texttt{sub-area\ analysis}.
+\texttt{sub-area\ analysis}. This cut out network is useful for further
+analysis in other software, such as Vissim or Aimsun or other
+microscopic simulation software.
 
-\subsection{Purpose}
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{Standard_uitvoer/09_Uitsnednetwerken(TNO)/images/uitsnijd.png}}
+\end{center}
+
+\subsection{Purpose}\label{purpose-6}
 
 Look inside each tab to understand what you will get from this job.
 
-\subsection{Inputs}
+\subsection{Inputs}\label{inputs-6}
 
 Following are the inputs to this job.
 
@@ -507,7 +706,7 @@ Following are the inputs to this job.
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{Outputs}
+\subsection{Outputs}\label{outputs-6}
 
 Following are the outputs to this job.
 
@@ -517,7 +716,7 @@ Following are the outputs to this job.
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{Code}
+\subsection{Code}\label{code-6}
 
 Download the code.\href{../../first.rb}{matrixcompress.rb}
 
@@ -540,6 +739,194 @@ Following are the outputs to this job.
 Download the code.\href{../first.rb}{matrixcompress.rb}
 
 \part{Custom Jobs}
+
+\chapter{Trip Length Distribution}\label{trip-length-distribution}
+
+\section{Purpose}\label{purpose-8}
+
+This job can create trip length distribution for a normal matrix or for
+a select link matrix or any matrix. One of these matrices is then
+combined with a skim matrix of choice.
+
+\begin{center}
+\includegraphics[width=4.61458in,height=\textheight,keepaspectratio]{Custom_Jobs/tld/images/TLDpic(Klein).png}
+\end{center}
+
+\section{Inputs}\label{inputs-8}
+
+This job can be run in two ways.The first method uses regular ranges for
+the x-axis and the second method uses irregular ranges.The regular
+ranges are specified using a min, max and interval. The irregular ranges
+are specified using an array of lower limits and an array of upper
+limits.
+
+\subsection{Method 1 - Regular Ranges}\label{method-1---regular-ranges}
+
+Following are the inputs to this job. You will also need a encrypted
+file tld.rc in your job folder.
+
+The following parameters are used to select the matrices and create a
+table.
+
+\begin{itemize}
+\tightlist
+\item
+  The parameter \texttt{mode\_matrix\_number}: is the matrix number of
+  the trip matrix.
+\item
+  The parameter \texttt{skim\_matrix\_number}: is the matrix number of
+  the skim matrix.
+\item
+  The parameters used for the chart are also used for the table.
+\end{itemize}
+
+The following parameters are used for plotting a chart. These 3 values
+will come based on the skim matrix.
+
+\begin{itemize}
+\tightlist
+\item
+  The parameter \texttt{x\_axis\_max}: is the maximum distance you want
+  to show on the x-axis.
+\item
+  The parameter \texttt{x\_axis\_min}: is the minimum distance you want
+  to show on the x-axis.
+\item
+  The parameter \texttt{x\_axis\_interval}: is the interval on the
+  x-axis.
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, opacitybacktitle=0.6, coltitle=black, opacityback=0, colback=white, colframe=quarto-callout-important-color-frame, rightrule=.15mm, bottomtitle=1mm, breakable, bottomrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, titlerule=0mm, leftrule=.75mm, left=2mm]
+
+To specify the x-axis min max, open your skim matrix in Omnitrans and
+check the min max values. Be sure to check that the \emph{Total trips in
+the matrix} is same as \emph{Total trips in the frequency table}. Both
+these values are shown in the output of this job. If they are not the
+same, your classes in the frequency table do not cover the entire range
+of distances in the skim matrix.
+
+\end{tcolorbox}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\VariableTok{$mode\_matrix\_number} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{1}\KeywordTok{]} \CommentTok{\# trip matrix}
+\VariableTok{$skim\_matrix\_number} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{13}\NormalTok{,}\DecValTok{1}\KeywordTok{]}  \CommentTok{\# skim matrix}
+
+\VariableTok{$x\_axis\_max} \OperatorTok{=} \DecValTok{11} \CommentTok{\# max value on x{-}axis}
+\VariableTok{$x\_axis\_min} \OperatorTok{=} \DecValTok{0} \CommentTok{\# min value on x{-}axis}
+\VariableTok{$x\_axis\_interval} \OperatorTok{=}  \DecValTok{1} \CommentTok{\# interval on x{-}axis}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Method 2 - Irregular
+Ranges}\label{method-2---irregular-ranges}
+
+Following are the inputs to this job. You will also need a encrypted
+file tld.rc in your job folder.
+
+The following parameters are used to select the matrices and create a
+table.
+
+\begin{itemize}
+\tightlist
+\item
+  The parameter \texttt{mode\_matrix\_number}: is the matrix number of
+  the trip matrix.
+\item
+  The parameter \texttt{skim\_matrix\_number}: is the matrix number of
+  the skim matrix.
+\item
+  \st{The parameters used for the chart are also used for the table.}
+\end{itemize}
+
+The following parameters are used for a generating a frequency table.
+These 2 values will come based on the skim matrix.
+
+\begin{itemize}
+\tightlist
+\item
+  The parameter \texttt{x\_axis\_min}: is an array of lower limits of
+  the class on x-axis.
+\item
+  The parameter \texttt{x\_axis\_max}: is an array of upper limits of
+  the class on x-axis.
+\item
+  The parameter \texttt{x\_axis\_interval}: is always set to zero.
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, opacitybacktitle=0.6, coltitle=black, opacityback=0, colback=white, colframe=quarto-callout-important-color-frame, rightrule=.15mm, bottomtitle=1mm, breakable, bottomrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, titlerule=0mm, leftrule=.75mm, left=2mm]
+
+To specify the x-axis min max, open your skim matrix in Omnitrans and
+check the min max values. Be sure to check that the \emph{Total trips in
+the matrix} is same as \emph{Total trips in the frequency table}. Both
+these values are shown in the output of this job. If they are not the
+same, your classes in the frequency table do not cover the entire range
+of distances in the skim matrix.
+
+\end{tcolorbox}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\VariableTok{$mode\_matrix\_number} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{1}\KeywordTok{]} \CommentTok{\# trip matrix}
+\VariableTok{$skim\_matrix\_number} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{13}\NormalTok{,}\DecValTok{1}\KeywordTok{]}  \CommentTok{\# skim matrix}
+
+\VariableTok{$x\_axis\_min} \OperatorTok{=} \KeywordTok{[}\DecValTok{0}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{40}\KeywordTok{]} \CommentTok{\# lower limits}
+\VariableTok{$x\_axis\_max} \OperatorTok{=} \KeywordTok{[}\DecValTok{10}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{40}\NormalTok{,}\DecValTok{100}\KeywordTok{]} \CommentTok{\# upper limits}
+\VariableTok{$x\_axis\_interval} \OperatorTok{=}  \DecValTok{0} \CommentTok{\# interval on x{-}axis}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Outputs}\label{outputs-8}
+
+Following are the outputs to this job:
+
+\begin{itemize}
+\item
+  A tabular format that you can copy paste into excel.
+\item
+  A chart that you can save as an image
+\item
+  No chart is created for irregular ranges (Method 2).
+\end{itemize}
+
+\section{Code}\label{code-8}
+
+Download the encrypted file \href{./tld.rc}{tld.rc}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# OmniTRANS Job for \textquotesingle{}Delft Tutorial Static\textquotesingle{}}
+\CommentTok{\# Created 2{-}9{-}2025 13:17:16}
+\CommentTok{\# Author \textquotesingle{}Srirama\textquotesingle{}}
+
+\CommentTok{=begin}
+\CommentTok{This script creates a trip length distribution chart }
+\CommentTok{based on trip and distance matrices. It uses the OtChart library}
+\CommentTok{to visualize the distribution of trips by distance.}
+\CommentTok{=end}
+
+\FunctionTok{require} \StringTok{"OtChart"}
+
+
+
+\CommentTok{\# INPUTS}
+
+\VariableTok{$mode\_matrix\_number} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{1}\KeywordTok{]} \CommentTok{\# trip matrix}
+\VariableTok{$skim\_matrix\_number} \OperatorTok{=} \KeywordTok{[}\DecValTok{1}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{13}\NormalTok{,}\DecValTok{1}\KeywordTok{]}  \CommentTok{\# skim matrix}
+
+\VariableTok{$x\_axis\_min} \OperatorTok{=} \DecValTok{0}
+\VariableTok{$x\_axis\_max} \OperatorTok{=} \DecValTok{11}
+\VariableTok{$x\_axis\_interval} \OperatorTok{=}  \DecValTok{1}
+
+\CommentTok{\# Uncomment the following lines for irregular ranges}
+\CommentTok{\# $x\_axis\_min = [0,10,20,40] \# lower limits}
+\CommentTok{\# $x\_axis\_max = [10,20,40,100] \# upper limits}
+\CommentTok{\# $x\_axis\_interval =  0 \# interval on x{-}axis}
+
+
+\NormalTok{requireCrypted(}\VariableTok{$Ot}\AttributeTok{.dirJob}\OperatorTok{+}\StringTok{"tld.rc"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \part{Others}
 

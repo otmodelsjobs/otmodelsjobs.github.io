@@ -1,11 +1,10 @@
 # Uitsnednetwork
 
-This job allows you to cut a cordon from the larger network and create an OD matrix for this cordon. This is also known as `sub-area analysis`.
+This job allows you to cut a cordon from the larger network and create an OD matrix for this cordon. This is also known as `sub-area analysis`. This cut out network is useful for further analysis in other software, such as Vissim or Aimsun or other microscopic simulation software.
+
+![](images/uitsnijd.png){fig-align="center"}
 
 
-
-::::: nav-pills
-:::: panel-tabset
 ### Purpose
 
 Look inside each tab to understand what you will get from this job.
@@ -55,7 +54,4 @@ fratarTest.destination_cube = 'FratarDemo' # Resultaatcube waar het resultaat va
 fratarTest.execute
 ```
 :::
-::::
-:::::
-
 

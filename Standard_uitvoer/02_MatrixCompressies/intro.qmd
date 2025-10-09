@@ -1,7 +1,5 @@
 # Matrix Compressies
 
-:::::: nav-pills
-::::: panel-tabset
 ## Purpose
 
 There are 4 types of matrix compression jobs. Each job has a different spatial aggregation level. The four aggregation levels are :
@@ -13,12 +11,11 @@ There are 4 types of matrix compression jobs. Each job has a different spatial a
 
 ![](/images/compression.png)
 
-```         
-```
-
 ## Inputs
 
 The inputs for the job are matrices listed under `$matrices`. Different jobs handle the different level of aggregation for you, so you do not have to change anything else in the job (see outputs if you want to change output formats). The input `$matrices`takes a list, each item in the list takes the form `["Output_Sheet_name", [P,M,T,U]],`.
+
+![](images/matcompress.png){fig-align="center" width="403"}
 
 ::: callout-important
 Each spatial level is a different job. If you have changed only the list of matrices in the job, you can use it without caution. But if you have changed the `# definieer Gebieden` part of the code, that is, if you have changed the definition of each gebied, you have to be careful that each *Centroid Number* is exclusively in ONLY ONE *gebied*. If not, you will get an error.
@@ -32,7 +29,7 @@ You also have to control the output format. The output can be in two formats: ex
 
 Download the code.[matrixcompress.rb](../first.rb)
 
-::: {.content-hidden when-format="pdf"}
+::: content-hidden
 ``` ruby
 # Variabelen: 
 #====================================================================================================================
@@ -179,5 +176,3 @@ WriteMatrixToExcel(gecomprimeerdeMatrices, $matrices, $naam)
 writeln "Gereed!"
 ```
 :::
-:::::
-::::::
