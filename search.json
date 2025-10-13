@@ -230,11 +230,55 @@
     ]
   },
   {
-    "objectID": "Standard_uitvoer/11_Milieu(Goudappel)/intro.html",
-    "href": "Standard_uitvoer/11_Milieu(Goudappel)/intro.html",
+    "objectID": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html",
+    "href": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html",
     "title": "8  Milieu",
     "section": "",
-    "text": "PurposeInputsOutputsCode\n\n\nSome text explaining what the code does.\n\n\nFollowing are the inputs to this job.\n\n\nFollowing are the outputs to this job.\n\n\nDownload the code.matrixcompress.rb",
+    "text": "8.1 Purpose",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Milieu</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html#inputs",
+    "href": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html#inputs",
+    "title": "8  Milieu",
+    "section": "8.2 Inputs",
+    "text": "8.2 Inputs",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Milieu</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html#outputs",
+    "href": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html#outputs",
+    "title": "8  Milieu",
+    "section": "8.3 Outputs",
+    "text": "8.3 Outputs",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Milieu</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html#code",
+    "href": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html#code",
+    "title": "8  Milieu",
+    "section": "8.4 Code",
+    "text": "8.4 Code\nDownload the code.matrixcompress.rb",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Milieu</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html#extra-info",
+    "href": "Standard_uitvoer/11_Milieu(Goudappel)/weekdag.html#extra-info",
+    "title": "8  Milieu",
+    "section": "8.5 Extra Info",
+    "text": "8.5 Extra Info\nIn the weekdagmodule, there are options to generate shapefiles in GEOMILIEU and CIMLK formats. In these shapefiles, there are several fields. The definition of these fields are as follows:\n\n8.5.1 Fieldnames in Geomilieu Export\n\n\n\n8.5.2 Dagdeel Calculation Periods\nDAY =&gt; dag = 12 uur\nEVE =&gt; avond = 4 uur\nNI =&gt; nacht = 8 uur\n\nRekenvoorbeeld\nDag LV * 12 + Avond LV * 4 + Nacht LV * 8 =&gt; LV Etmaal",
     "crumbs": [
       "Standard Uitvoer",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Milieu</span>"
