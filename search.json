@@ -113,7 +113,40 @@
     "href": "Standard_uitvoer/05_(Skim)Matrix_Exports/intro.html",
     "title": "3  Skim Matrix Exports",
     "section": "",
-    "text": "PurposeInputsOutputsCode\n\n\nSome text explaining what the code does.\n\n\nFollowing are the inputs to this job.\n\n\nFollowing are the outputs to this job.\n\n\nDownload the code.matrixcompress.rb",
+    "text": "3.1 Purpose\nSome text explaining what the code does.",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Skim Matrix Exports</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/05_(Skim)Matrix_Exports/intro.html#inputs",
+    "href": "Standard_uitvoer/05_(Skim)Matrix_Exports/intro.html#inputs",
+    "title": "3  Skim Matrix Exports",
+    "section": "3.2 Inputs",
+    "text": "3.2 Inputs\nFollowing are the inputs to this job.",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Skim Matrix Exports</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/05_(Skim)Matrix_Exports/intro.html#outputs",
+    "href": "Standard_uitvoer/05_(Skim)Matrix_Exports/intro.html#outputs",
+    "title": "3  Skim Matrix Exports",
+    "section": "3.3 Outputs",
+    "text": "3.3 Outputs\nFollowing are the outputs to this job.",
+    "crumbs": [
+      "Standard Uitvoer",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Skim Matrix Exports</span>"
+    ]
+  },
+  {
+    "objectID": "Standard_uitvoer/05_(Skim)Matrix_Exports/intro.html#code",
+    "href": "Standard_uitvoer/05_(Skim)Matrix_Exports/intro.html#code",
+    "title": "3  Skim Matrix Exports",
+    "section": "3.4 Code",
+    "text": "3.4 Code\nDownload the code.matrixcompress.rb",
     "crumbs": [
       "Standard Uitvoer",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Skim Matrix Exports</span>"
