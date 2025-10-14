@@ -1,16 +1,10 @@
 # Skim Matrix Exports
 
-
-
-
-::: {.nav-pills}
-::: {.panel-tabset}
+![](images/skim_export(Klein).png){fig-align="center" width="329"}
 
 ## Purpose
 
 Some text explaining what the code does.
-
-
 
 ## Inputs
 
@@ -23,8 +17,3 @@ Following are the outputs to this job.
 ## Code
 
 Download the code.[matrixcompress.rb](../first.rb)
-
-
-
-:::
-:::
