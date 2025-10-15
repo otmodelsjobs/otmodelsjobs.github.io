@@ -4,3 +4,5 @@
 _output/
 *.tex
 docs/
+site_libs/
+
