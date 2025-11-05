@@ -65,6 +65,13 @@ format:
     
   pdf:
     documentclass: scrreprt
+    papersize: a4
+    code: false
+    geometry:
+      - top=25mm
+      - bottom=25mm
+      - left=25mm
+      - right=25mm
     keep-tex: true
     toccolor: blue
     toc-title: Job index

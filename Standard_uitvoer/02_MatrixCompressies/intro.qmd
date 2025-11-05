@@ -31,7 +31,7 @@ You also have to control the output format. The output can be in two formats: ex
 Download the code.[matrixcompress.rb](../first.rb)
 
 
-
+:::{.content-hidden when-format="pdf"}
 
 ``` ruby
 =begin
@@ -187,6 +187,6 @@ gecomprimeerdeMatrices = matrixCompress($matrices ,$rows)
 writeln "Gereed!"
 
 ```
-
+:::
 :::
 
