@@ -4,7 +4,7 @@
 
 The voertuigprestaties ( or vehicle-km, vehicle-hours) is a performance indicator for the whole network (or selected-part of a network). This indicator shows how many km were travelled by all the vehicles collectively in the network or how many hours were spent by all the vehicles collectively in the network. More time spent by vehicles in the network could indicate congestion. Similarly more vehicle-km driven by vehicles indicate higher pollution/ fuel-usage levels for example.
 
-![](images/veh-km.png){fig-align="center" width="741"}
+![](images/veh-km.png){fig-align="center" width="604"}
 
 ## Inputs
 
