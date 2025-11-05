@@ -1,10 +1,16 @@
-# Skim Matrix Exports
+# Skim or Matrix Exports
+
+In transport modeling, a skim is a matrix that contains travel times, costs, or other impedance measures between zones in a study area. Skims are often used in travel demand modeling to estimate the attractiveness of different routes or modes of transportation. 
+
+::: callout-important
+Because skims are a matrix, this job can be used for exporting skims and matrices.
+:::
 
 ![](images/skim_export(Klein).png){fig-align="center" width="329"}
 
 ## Purpose
 
-Some text explaining what the code does.
+This job exports skims and matrices from the OT model. The exported skims can be used for further analysis, reporting, or as inputs to other modeling processes. The skims can be exported to csv
 
 ## Inputs
 
