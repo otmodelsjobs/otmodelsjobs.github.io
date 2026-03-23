@@ -1,6 +1,8 @@
 # Matrix Compressies
 
 
+You can also download the shapefile (geojson) from download section below.
+
 ## Purpose
 
 There are 4 types of matrix compression jobs. Each job has a different spatial aggregation level. The four aggregation levels are :
@@ -189,4 +191,11 @@ writeln "Gereed!"
 ```
 :::
 :::
+
+## Downloads
+
+This file  contains the shape file of the areas. You can use it to visualize the areas in a GIS software, such as QGIS or ArcGIS.
+
+<a href="https://github.com/otmodelsjobs/otmodelsjobs.github.io/blob/user/Standard_uitvoer/02_MatrixCompressies/clean65x65zones.geojson" download = "clean65x65zones.geojson">  Download File from GitHub </a>
+
 
